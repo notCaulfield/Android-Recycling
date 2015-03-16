@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WasteNot</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="hardcoded_recycling">
+        <item>Automotive</item>
+        <item>Batteries</item>
+        <item>Construction</item>
+        <item>Electronics</item>
+        <item>Garden</item>
+        <item>Glass</item>
+        <item>Hazardous</item>
+        <item>Household</item>
+        <item>Metal</item>
+        <item>Paint</item>
+        <item>Paper</item>
+        <item>Plastic</item>
+    </string-array>
+
+</resources>
