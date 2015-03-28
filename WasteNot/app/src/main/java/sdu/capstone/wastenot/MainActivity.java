@@ -11,12 +11,13 @@ import android.widget.ArrayAdapter;
 
 public class MainActivity extends ActionBarActivity {
     private Spinner list;
+    private DataStorage data = new DataStorage();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        data.getType("shingles")[0].getContact();
         initSpinner();
     }
 
