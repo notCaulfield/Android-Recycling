@@ -51,7 +51,7 @@ public class DataStorage {
                 "(410) 987-0313", null, null);
         shingles[2] = new Center("Roll-Off Express", "2900 Dede Road \n" +
                 "Finksburg, MD 21048",
-                "((410) 526-3535", "rolloffjack@aol.com", "Bob Leatherman or Jack Haden");
+                "((410) 526-3535", "rolloffjack@aol.com", null);
         shingles[3] = new Center("Roofs to Roads", "1005 Rising Ridge Road\n" +
                 "Mt. Airy, MD 21771",
                 "(301) 831-0888", null, "www.fromrooftoroad.com");
@@ -64,9 +64,11 @@ public class DataStorage {
         bricks[0] = new Center("Aggregate Industries", "8615 Dorsey Run Road\n" +
                 "Jessup, MD 20794",
                 "(301) 317-0300",  null, null);
-        bricks[1] = new Center("Alternative Aggregate Recycling, Inc.", "1001 Edison Highway, Baltimore, Md 21213",
+        bricks[1] = new Center("Alternative Aggregate Recycling, Inc.", "1001 Edison Highway\n" +
+                "Baltimore, Md 21213",
                 "(410) 483-1012", null, null);
-        bricks[2] = new Center("Aggregate Industries", "1001 Edison Highway, Baltimore, Md 21213",
+        bricks[2] = new Center("Aggregate Industries", "8615 Old Dorsey Run Road\n" +
+                "Jessup, MD 20794",
                 "(410) 483-1012",  null, null);
         bricks[3] = new Center("Annapolis Junction", "8615 Old Dorsey Run Road\n" +
                 "Jessup, MD 20794",
@@ -96,7 +98,7 @@ public class DataStorage {
         bricks[12] = new Center("DC Rock", "1721 South Capitol Street, SW\n" +
                 "Washington, DC 20003",
                 "(202) 554-1250", null, null);
-        bricks[13] = new Center("Dependable Sand, Stone & Recycling, Inc. ", "13155 Ocean Gateway\n" +
+        bricks[13] = new Center("Dependable Sand, Stone & Recycling, Inc.", "13155 Ocean Gateway\n" +
                 "PO Box 130\n" +
                 "Queen Anne, MD 21657",
                 "(410) 822-6363", null, null);
@@ -150,22 +152,60 @@ public class DataStorage {
                 "(410) 523-7300",  "sbradford@bnblightingsupply.com", null);
         batteries[2] = new Center("Batteries & Bulbs", "29 East Padonia Road\n" +
                 "Timonium, MD 21093",
-                "(410) 628-7999", "BP889@batteriesplus.net", null);
-        batteries[3] = new Center("", "",
-                "", null, null);
-        batteries[4] = new Center("", "",
-                "", null, null);
-        batteries[5] = new Center("", "",
-                "", null, null);
-        batteries[6] = new Center("", "",
-                "", null, null);
-        batteries[7] = new Center("", "",
-                "", null, null);
-        batteries[8] = new Center("", "",
-                "", null, null);
-        batteries[9] = new Center("", "",
-                "",  null, null);
-
+                "(410) 628-7999", "BP889@batteriesplus.net", "www.batteriesplusbulbs.com");
+        batteries[3] = new Center("Broadview Waste Services (BWS Inc.)", "7610 Energy Parkway\n" +
+                "Baltimore, MD 21226",
+                "(410) 437-6590", "info@bwaste.com", "www.bwaste.com");
+        batteries[4] = new Center("Cambridge Iron & Metal Company", "901 South Kresson Street\n" +
+                "Baltimore, MD 21224",
+                "(410) 327-7867", null, null);
+        batteries[5] = new Center("Clean Venture, Inc.", "2931 Whittington Avenue\n" +
+                "Baltimore, MD 21230",
+                "(410) 368-9170", "dave.roesler@cyclechem.com", "www.chclechem.com");
+        batteries[6] = new Center("Commercial Retrofitters & Recyclers", "P O Box 1045\n" +
+                "Dunkirk, MD 20754",
+                "(301) 358-6324", "pgoff@commretrorecycle.com", "www.commretrorecycle.com");
+        batteries[7] = new Center("Eco-Battery, Inc.", "510 McCormick Drive, Suite P-Q\n" +
+                "Glen Burnie, MD 21061",
+                "888-768-0844", null, "www.eco-batteryinc.com");
+        batteries[8] = new Center("Geller Lighting Supply, Inc.", "3720 Commerce Drive \n" +
+                "Baltimore, MD 21227",
+                "(410) 247-3636", null, null);
+        batteries[9] = new Center("H.D. Metal Company", "909 Boundary Street\n" +
+                "Salisbury, MD 21802",
+                "(410) 546-1111",  null, null);
+        batteries[10] = new Center("M.O.U. Enterprises, Inc.", "200 Penrod Court, Suite F\n" +
+                "Glen Burnie, MD 21061",
+                "(410) 648-4072",  "mouenterprisesinc.com", "www.mouenterprisesinc.com");
+        batteries[11] = new Center("Maryland Recycle Company (Elkridge)", "5618 Furnace Avenue\n" +
+                "Elkridge, MD 21075",
+                "(410) 796-0760",  null, null);
+        batteries[12] = new Center("Maryland Recycle Company (Glen Burnie)", "200 8th Avenue, NW\n" +
+                "Glen Burnie, MD 21061",
+                "(410) 760-9088",  "mdrecycle@aol.com", null);
+        batteries[13] = new Center("Maryland Recycle Company (Owings Mills)", "24 Gwynns Mill Court\n" +
+                "Owings Mills, MD 21117",
+                "(410) 363-3347", "metalprorecycling.com", null);
+        batteries[14] = new Center("Maryland Recycle Company (Rosedale)", "8920 Yellow Brick Road\n" +
+                "Rosedale, MD 21237",
+                "(410) 780-3060",  null, null);
+        batteries[15] = new Center("Metal Recyclers, LLC", "8312 Lokus Road\n" +
+                "Odenton, MD 21113",
+                "(410) 674-2000",  null, "www.metalrecyclersusa.com");
+        batteries[16] = new Center("Ocean City Recycling Center", "210 65th Street\n" +
+                "Ocean City, MD 21842",
+                "(410) 524-5356",  null, null);
+        batteries[17] = new Center("Schultz & Sons Salvage", "24769 Meeting House Road\n" +
+                "Denton, MD 21629",
+                "(410) 479-2110", "recycle@shore.intercom.net", null);
+        batteries[18] = new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
+                "Beltsville, MD 20705",
+                "(301) 931-6993",  "kevindaly@turbohaul.com", null);
+        batteries[19] = new Center("Waldorf Metal Company", "P.O. Box 1\n" +
+                "Bryantown, MD 20617",
+                "(301) 932-1220",  null, null);
+        //batteries[20] = new Center("", "",
+        //        "",  null, null);
     }
 
 
