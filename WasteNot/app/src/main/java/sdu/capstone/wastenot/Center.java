@@ -8,20 +8,20 @@ public class Center {
     private String name = null;
     private String address = null;
     private String phone = null;
-    private String fax = null;
+    //private String fax = null;
     private String email = null;
-    private String contact = null;
+    private String website = null;
    /// private String[] types = null; // Storing types by external array Very Important (create separately for safety)
 
 
     //If an element is not present, null will be in it's place
-    public Center(String name, String address, String phone, String fax, String email, String contact) {
+    public Center(String name, String address, String phone,/* String fax,*/ String email, String website) {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.fax = fax;
+       // this.fax = fax;
         this.email = email;
-        this.contact = contact;
+        this.website = website;
     }
 
     //Returns String Array
@@ -37,9 +37,9 @@ public class Center {
     //Once made we only need to get values, not change them - thus only getters
     //If a getter returns null, then do not display for that value
 
-    public String getContact() {
+    public String getWebsite() {
 
-        return contact;
+        return website;
     }
 
     public String getEmail() {
@@ -47,10 +47,10 @@ public class Center {
         return email;
     }
 
-    public String getFax() {
+    /*public String getFax() {
 
         return fax;
-    }
+    }*/
 
     public String getPhone() {
 
