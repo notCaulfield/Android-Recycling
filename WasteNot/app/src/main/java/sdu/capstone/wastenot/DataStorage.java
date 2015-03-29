@@ -3,6 +3,13 @@ package sdu.capstone.wastenot;
 /**
  * Created by Holden on 3/27/2015.
  */
+
+/*
+    Sample request for a name from DataStorage:
+    DataStorage d = new DataStorage();
+    d.getType("batteries")[0].getName(); - Returns "Arundel Recycling Center, Inc."
+    Everything is based off that. Use for each loops I guess...
+ */
 public class DataStorage {
 
     private Center[] shingles = new Center[5];
