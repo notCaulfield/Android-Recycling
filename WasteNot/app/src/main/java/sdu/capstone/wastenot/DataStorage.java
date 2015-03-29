@@ -209,11 +209,19 @@ public class DataStorage {
     }
 
 
+    /*
+        Pre: A string which matches with a given Center Array
+        Post:Returns the array storing the requested type of recycling centers, null if an invalid request -
+        handling is expected on the other side, but there should not ba any invalid requests
+        //TODO Alphonse, I (or you) can change the String request matches to the official strings.xml versions (i.e. shingles to "Asphalt Shingles") if you would prefer.
+     */
     public Center[] getType(String str) {
         if(str.equals("shingles")) {
             return shingles;
         } else if(str.equals("bricks")) {
             return bricks;
+        } else if(str.equals("batteries")) {
+            return batteries;
         }
 
         return null;
