@@ -289,6 +289,43 @@ public class DataStorage {
         cardboard[25] = new Center("Modern Junk & Salvage", "1423 North Freemont Ave. \n" +
                 "Baltimore, MD 21217 ",
                 "(410) 669-8290",  null, null);
+        cardboard[26] = new Center("Nova Services, Inc.", "2500 Grays Road\n" +
+                "Baltimore, MD 21222",
+                        "(410) 388-2200",  "dkellermann@novarecycles.com", null);
+        cardboard[27] = new Center("Office Paper Systems, Inc.", "7650 Airpark Road\n" +
+                "Gaithersburg, MD 20879-4156",
+                "(301) 948-6301",  null, null);
+        cardboard[28] = new Center("Prince Georges Co. Materials Recovery Facility", "1000 Ritchie Road \n" +
+                "Capitol Heights, MD 20743",
+                "(301) 499-1707",  null, null);
+        cardboard[29] = shingles[2]; //repeat: Roll-off
+        cardboard[30] = new Center("Secondary Solutions", "P.O. Box 727\n" +
+                "Funkstown, MD 21734-0727",
+                "(301) 797-4237",  "ssolut1121@aol.com", null);
+        cardboard[31] = new Center("Simkins Industries, Inc.", "201 River Road \n" +
+                "P.O. Box 3249 \n" +
+                "Catonsville, MD 21228",
+                "(410) 747-5100",  null, null);
+        cardboard[32] = new Center("The Owl Corporation", "1900 Graves Court\n" +
+                "Baltimore, MD 21222",
+                "(410) 282-0067",  "jlpaperbuyer@aol.com", "www.theowlcorp.com");
+        cardboard[33] = shingles[4]; //repeat: Turbohaul
+        cardboard[35] = new Center("Universal Recycling, Inc.", "1000 Ritchie Road\n" +
+                "Capital Heights, MD 20743-3706",
+                "(301) 336-5932",  null, null);
+        cardboard[36] = new Center("Vangel Paper, Inc.", "3020 Nieman Avenue\n" +
+                "Baltimore, MD 21230",
+                "(410) 644-2600",  null, "www.vangelpaper.com");
+        cardboard[37] = new Center("Waste Management of MD/Baltimore", "6333 Macaw Court \n" +
+                "Elkridge, MD 21075",
+                "(410) 796-701",  null, null);
+        cardboard[38] = new Center("Westreet Industries", "5107 North Point Blvd. \n" +
+                "Baltimore, MD 21219",
+                "(410) 477-7500",  null, null);
+        cardboard[39] = new Center("World Recycling, Inc.", "5600 Columbia Park Road \n" +
+                "Cheverly, MD 20785",
+                "(301) 386-3010",  null, null);
+
     }
 
 
