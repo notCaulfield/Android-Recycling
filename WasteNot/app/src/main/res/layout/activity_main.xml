@@ -8,6 +8,17 @@
 
 
     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="centers" />
+
+    <ListView
+        android:id="@+id/rcListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -22,6 +33,16 @@
         android:layout_gravity="center_horizontal"
         android:focusableInTouchMode="true"
         android:clickable="true"
-        android:entries="@array/hardcoded_recycling"/>
+        android:entries="@array/recycle_array"/>
+
+    <resources>
+        <string-array name="recycle_array">
+            <item>shingles</item>
+            <item>bricks</item>
+            <item>batteries</item>
+            <item>cardboard</item>
+
+        </string-array>
+    </resources>
 
 </LinearLayout>
