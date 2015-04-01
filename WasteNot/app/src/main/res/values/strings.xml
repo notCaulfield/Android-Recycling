@@ -30,4 +30,12 @@
         <item>Other Materials</item>
     </string-array>
 
+
+    <string-array name="recycle_array">
+        <item>shingles</item>
+        <item>bricks</item>
+        <item>batteries</item>
+        <item>cardboard</item>
+    </string-array>
+
 </resources>

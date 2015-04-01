@@ -1,5 +1,7 @@
 package sdu.capstone.wastenot;
 
+import java.util.ArrayList;
+
 /**
  * Created by Holden on 3/27/2015.
  */
@@ -12,10 +14,10 @@ package sdu.capstone.wastenot;
  */
 public class DataStorage {
 
-    private Center[] shingles = new Center[5];
-    private Center[] bricks = new Center[47]; //Damn son
-    private Center[] batteries = new Center[37];
-    private Center[] cardboard = new Center[68];
+    private ArrayList<Center> shingles = new ArrayList<Center>();
+    private ArrayList<Center> bricks = new ArrayList<Center>(); //Damn son
+    private ArrayList<Center> batteries = new ArrayList<Center>();
+    private ArrayList<Center> cardboard = new ArrayList<Center>();
     //private Center[] garden = new Center[5];
     private Center[] dental = new Center[16];
     private Center[] electronics = new Center[90];
@@ -44,30 +46,30 @@ public class DataStorage {
 
     private void init() {
         shinglesInit();
-        bricksInit();
-        batteriesInit();
-        cardboardInit();
+      //  bricksInit();
+      //  batteriesInit();
+      //  cardboardInit();
     }
 
 
     private void shinglesInit() {
-        shingles[0] = new Center("Brandywine Enterprises", "5800 Sheriff Road\n" +
+        shingles.add(new Center("Brandywine Enterprises", "5800 Sheriff Road\n" +
                 "Fairmont Heights, MD 20743-6302",
-                "(301) 925-8100", "bmcalwee@brandywineco.com", "Brenda McAlwee");
-        shingles[1] = new Center("Reliable Contracting", "1 Churchview Road\n" +
+                "(301) 925-8100", "bmcalwee@brandywineco.com", "Brenda McAlwee"));
+        shingles.add(new Center("Reliable Contracting", "1 Churchview Road\n" +
                 "Millersville, MD 21108",
-                "(410) 987-0313", null, null);
-        shingles[2] = new Center("Roll-Off Express", "2900 Dede Road \n" +
+                "(410) 987-0313", null, null));
+        shingles.add(new Center("Roll-Off Express", "2900 Dede Road \n" +
                 "Finksburg, MD 21048",
-                "((410) 526-3535", "rolloffjack@aol.com", null);
-        shingles[3] = new Center("Roofs to Roads", "1005 Rising Ridge Road\n" +
+                "((410) 526-3535", "rolloffjack@aol.com", null));
+        shingles.add( new Center("Roofs to Roads", "1005 Rising Ridge Road\n" +
                 "Mt. Airy, MD 21771",
-                "(301) 831-0888", null, "www.fromrooftoroad.com");
-        shingles[4] = new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
+                "(301) 831-0888", null, "www.fromrooftoroad.com"));
+        shingles.add(new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
                 "Beltsville, MD 207055",
-                "(301) 931-6993", "kevindaly@turbohaul.com", null);
+                "(301) 931-6993", "kevindaly@turbohaul.com", null));
     }
-
+/*
     private void bricksInit() {
         bricks[0] = new Center("Aggregate Industries", "8615 Dorsey Run Road\n" +
                 "Jessup, MD 20794",
@@ -327,23 +329,23 @@ public class DataStorage {
                 "(301) 386-3010",  null, null);
 
     }
-
+*/
 
     /*
         Pre: A string which matches with a given Center Array
         Post:Returns the array storing the requested type of recycling centers, null if an invalid request -
         handling is expected on the other side, but there should not ba any invalid requests
         //TODO Alphonse, I (or you) can change the String request matches to the official strings.xml versions (i.e. shingles to "Asphalt Shingles") if you would prefer.
-     */
-    public Center[] getType(String str) {
+     */ //Was Center[]
+    public ArrayList<Center> getType(String str) {
         if(str.equals("shingles")) {
             return shingles;
         } else if(str.equals("bricks")) {
-            return bricks;
+          //  return bricks;
         } else if(str.equals("batteries")) {
-            return batteries;
+        //    return batteries;
         } else if(str.equals("cardboard")) {
-            return cardboard;
+         //   return cardboard;
         }
 
         return null;

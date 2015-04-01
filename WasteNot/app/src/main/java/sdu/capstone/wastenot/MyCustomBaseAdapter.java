@@ -3,7 +3,7 @@ package sdu.capstone.wastenot;
 
 import java.util.ArrayList;
 
-import com.publicstaticdroidmain.R;
+//import com.publicstaticdroidmain.R;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -37,33 +37,33 @@ public class MyCustomBaseAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.custom_row_view, null);
+            convertView = mInflater.inflate(R.layout.list_view, null);
             holder = new ViewHolder();
             holder.txtName = (TextView) convertView.findViewById(R.id.name);
-            holder.txtAdress = (TextView) convertView
+            holder.txtAddress = (TextView) convertView
                     .findViewById(R.id.address);
             holder.txtPhone = (TextView) convertView.findViewById(R.id.phone);
-            holder.txtWebsite = (TextView) convertView.findViewById(R.id.website);
-            holder.txtEmail = (TextView) convertView.findViewById(R.id.email);
+            //holder.txtWebsite = (TextView) convertView.findViewById(R.id.website);
+           //holder.txtEmail = (TextView) convertView.findViewById(R.id.email);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
         holder.txtName.setText(searchArrayList.get(position).getName());
-        holder.txtAdress.setText(searchArrayList.get(position)
-                .getAdress());
+        holder.txtAddress.setText(searchArrayList.get(position)
+                .getAddress());
         holder.txtPhone.setText(searchArrayList.get(position).getPhone());
-        holder.txtWebsite.setText(searchArrayList.get(position).getWebsite());
-        holder.txtEmail.setText(searchArrayList.get(position).getEmail());
+        //holder.txtWebsite.setText(searchArrayList.get(position).getWebsite());
+        //holder.txtEmail.setText(searchArrayList.get(position).getEmail());
         return convertView;
     }
 
     static class ViewHolder {
         TextView txtName;
-        TextView txtAdress;
+        TextView txtAddress;
         TextView txtPhone;
-        TextView txtWebsite;
-        TextView txtEmail;
+       //TextView txtWebsite;
+        //TextView txtEmail;
     }
 }

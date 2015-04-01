@@ -6,21 +6,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import java.util.ArrayList;
 
 
 public class MainActivity extends ActionBarActivity {
     private Spinner list;
     private DataStorage data = new DataStorage();
-ArrayList <Center> centers;
+ArrayList<Center> Shingles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        centers= data.getType("shingles");
+        Shingles = data.getType("shingles");
 
         final ListView lv = (ListView) findViewById(R.id.rcListView);
-        lv.setAdapter(new MyCustomBaseAdapter(this, searchResults));
+        lv.setAdapter(new MyCustomBaseAdapter(this, Shingles));
         initSpinner();
 
     }

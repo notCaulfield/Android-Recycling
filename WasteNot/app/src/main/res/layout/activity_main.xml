@@ -11,7 +11,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
-        android:text="centers" />
+        android:text="Shingles" />
 
     <ListView
         android:id="@+id/rcListView"
@@ -35,14 +35,5 @@
         android:clickable="true"
         android:entries="@array/recycle_array"/>
 
-    <resources>
-        <string-array name="recycle_array">
-            <item>shingles</item>
-            <item>bricks</item>
-            <item>batteries</item>
-            <item>cardboard</item>
-
-        </string-array>
-    </resources>
 
 </LinearLayout>
