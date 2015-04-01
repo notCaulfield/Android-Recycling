@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /*
     Sample request for a name from DataStorage:
     DataStorage d = new DataStorage();
-    d.getType("batteries")[0].getName(); - Returns "Arundel Recycling Center, Inc."
+    d.getType("batteries").get(0).getName(); - Returns "Arundel Recycling Center, Inc."
     Everything is based off that. Use for each loops I guess...
  */
 public class DataStorage {
@@ -18,26 +18,26 @@ public class DataStorage {
     private ArrayList<Center> bricks = new ArrayList<Center>(); //Damn son
     private ArrayList<Center> batteries = new ArrayList<Center>();
     private ArrayList<Center> cardboard = new ArrayList<Center>();
-    //private Center[] garden = new Center[5];
-    private Center[] dental = new Center[16];
-    private Center[] electronics = new Center[90];
-    private Center[] flourescents = new Center[5];
-    private Center[] organics = new Center[5];
-    private Center[] glass = new Center[5];
-    private Center[] gypsum = new Center[5];
-    private Center[] toners = new Center[5];
-    private Center[] metals = new Center[5];
-    private Center[] oil = new Center[5];
-    private Center[] mercury = new Center[5];
-    private Center[] paper = new Center[5];
-    private Center[] plastics = new Center[5];
-    private Center[] salvage = new Center[5];
-    private Center[] unusual = new Center[5];
-    private Center[] textiles = new Center[5];
-    private Center[] tiles = new Center[5];
-    private Center[] pallets = new Center[5];
-    private Center[] wood = new Center[5];
-    private Center[] other = new Center[5];
+    //private ArrayList<Center> garden = new ArrayList<Center>();
+    private ArrayList<Center> dental = new ArrayList<Center>();
+    private ArrayList<Center> electronics = new ArrayList<Center>();
+    private ArrayList<Center> flourescents = new ArrayList<Center>();
+    private ArrayList<Center> organics = new ArrayList<Center>();
+    private ArrayList<Center> glass = new ArrayList<Center>();
+    private ArrayList<Center> gypsum = new ArrayList<Center>();
+    private ArrayList<Center> toners = new ArrayList<Center>();
+    private ArrayList<Center> metals = new ArrayList<Center>();
+    private ArrayList<Center> oil = new ArrayList<Center>();
+    private ArrayList<Center> mercury = new ArrayList<Center>();
+    private ArrayList<Center> paper = new ArrayList<Center>();
+    private ArrayList<Center> plastics = new ArrayList<Center>();
+    private ArrayList<Center> salvage = new ArrayList<Center>();
+    private ArrayList<Center> unusual = new ArrayList<Center>();
+    private ArrayList<Center> textiles = new ArrayList<Center>();
+    private ArrayList<Center> tiles = new ArrayList<Center>();
+    private ArrayList<Center> pallets = new ArrayList<Center>();
+    private ArrayList<Center> wood = new ArrayList<Center>();
+    private ArrayList<Center> other = new ArrayList<Center>();
 
 
     public DataStorage() {
@@ -46,9 +46,9 @@ public class DataStorage {
 
     private void init() {
         shinglesInit();
-      //  bricksInit();
-      //  batteriesInit();
-      //  cardboardInit();
+        bricksInit();
+        batteriesInit();
+        cardboardInit();
     }
 
 
@@ -69,267 +69,267 @@ public class DataStorage {
                 "Beltsville, MD 207055",
                 "(301) 931-6993", "kevindaly@turbohaul.com", null));
     }
-/*
+
     private void bricksInit() {
-        bricks[0] = new Center("Aggregate Industries", "8615 Dorsey Run Road\n" +
+        bricks.add(new Center("Aggregate Industries", "8615 Dorsey Run Road\n" +
                 "Jessup, MD 20794",
-                "(301) 317-0300",  null, null);
-        bricks[1] = new Center("Alternative Aggregate Recycling, Inc.", "1001 Edison Highway\n" +
+                "(301) 317-0300",  null, null));
+        bricks.add(new Center("Alternative Aggregate Recycling, Inc.", "1001 Edison Highway\n" +
                 "Baltimore, Md 21213",
-                "(410) 483-1012", null, null);
-        bricks[2] = new Center("Aggregate Industries", "8615 Old Dorsey Run Road\n" +
+                "(410) 483-1012", null, null));
+        bricks.add(new Center("Aggregate Industries", "8615 Old Dorsey Run Road\n" +
                 "Jessup, MD 20794",
-                "(410) 483-1012",  null, null);
-        bricks[3] = new Center("Annapolis Junction", "8615 Old Dorsey Run Road\n" +
+                "(410) 483-1012",  null, null));
+        bricks.add(new Center("Annapolis Junction", "8615 Old Dorsey Run Road\n" +
                 "Jessup, MD 20794",
-                "(301) 776-5900", null, null);
-        bricks[4] = new Center("Auston Contracting, Inc.", "1202 Pauls Lane\n" +
+                "(301) 776-5900", null, null));
+        bricks.add(new Center("Auston Contracting, Inc.", "1202 Pauls Lane\n" +
                 "Joppa, MD 21085",
-                "(410) 335-1016", "auston1@verizon.net", null);
-        bricks[5] = new Center("Baltimore Recycling Center", "1030 Edison Highway\n" +
+                "(410) 335-1016", "auston1@verizon.net", null));
+        bricks.add(new Center("Baltimore Recycling Center", "1030 Edison Highway\n" +
                 "Baltimore, MD 21213",
-                "(410) 534-2990",  null, null);
-        bricks[6] = new Center("Barnabas Stone", "4714 Clifton road\n" +
+                "(410) 534-2990",  null, null));
+        bricks.add(new Center("Barnabas Stone", "4714 Clifton road\n" +
                 "Temple Hills, MD 20784",
-                "(301) 423-1200",  null, null);
-        bricks[7] = new Center("Benjer, Inc.", "P O Box 695\n" +
+                "(301) 423-1200",  null, null));
+        bricks.add(new Center("Benjer, Inc.", "P O Box 695\n" +
                 "White Marsh, MD 21162",
-                "(410) 335-2267", "benjer@benjerinc.com", null);
-        bricks[8] = shingles[0]; //Repeat: Brandywine Enterprises
-        bricks[9] = new Center("Clean Earth of Maryland, Inc.", "1469 Oak Ridge Place\n" +
+                "(410) 335-2267", "benjer@benjerinc.com", null));
+        bricks.add(shingles.get(0)); //Repeat: Brandywine Enterprises
+        bricks.add(new Center("Clean Earth of Maryland, Inc.", "1469 Oak Ridge Place\n" +
                 "Hagerstown, MD 21742",
-                null, "cleanrock@aol.com", null);
-        bricks[10] = new Center("Community Forklift", "4671 Tanglewood Drive\n" +
+                null, "cleanrock@aol.com", null));
+        bricks.add(new Center("Community Forklift", "4671 Tanglewood Drive\n" +
                 "Edmonston/Hyattsville, MD 20781",
-                "(301) 985-5180",  "donations@communityforklift.com", "www.communityforklift.com");
-        bricks[11] = new Center("Days Cove Road Rubble Landfill ", "6425 Days Cove Road\n" +
+                "(301) 985-5180",  "donations@communityforklift.com", "www.communityforklift.com"));
+        bricks.add(new Center("Days Cove Road Rubble Landfill ", "6425 Days Cove Road\n" +
                 "White Marsh, MD 21162",
-                "(410) 335-3778", null, null);
-        bricks[12] = new Center("DC Rock", "1721 South Capitol Street, SW\n" +
+                "(410) 335-3778", null, null));
+        bricks.add(new Center("DC Rock", "1721 South Capitol Street, SW\n" +
                 "Washington, DC 20003",
-                "(202) 554-1250", null, null);
-        bricks[13] = new Center("Dependable Sand, Stone & Recycling, Inc.", "13155 Ocean Gateway\n" +
+                "(202) 554-1250", null, null));
+        bricks.add(new Center("Dependable Sand, Stone & Recycling, Inc.", "13155 Ocean Gateway\n" +
                 "PO Box 130\n" +
                 "Queen Anne, MD 21657",
-                "(410) 822-6363", null, null);
-        bricks[14] = new Center("Diamond Waste Services", "508 Glenbrook Road\n" +
+                "(410) 822-6363", null, null));
+        bricks.add(new Center("Diamond Waste Services", "508 Glenbrook Road\n" +
                 "Glen Burnie, MD 21061",
-                "(410) 350-7000", "anita.crehan@diamond-waste.com", null);
-        bricks[15] = new Center("Environmental Alternative Recycling, LLC", "1030 Edison Highway\n" +
+                "(410) 350-7000", "anita.crehan@diamond-waste.com", null));
+        bricks.add(new Center("Environmental Alternative Recycling, LLC", "1030 Edison Highway\n" +
                 "PO Box 9977\n" +
                 "Baltimore, MD 21224",
-                "(410) 534-2990", null, null);
-        bricks[16] = new Center("Global Resource Recyclers, Inc.", "2600 Marble Court\n" +
+                "(410) 534-2990", null, null));
+        bricks.add(new Center("Global Resource Recyclers, Inc.", "2600 Marble Court\n" +
                 "Forestville, MD 20747",
-                "(301) 568-2050", "hgreen@chamberlaincontractors.com", null);
-        bricks[17] = new Center("Habitat ReStore", "1109 East Patrick Street\n" +
+                "(301) 568-2050", "hgreen@chamberlaincontractors.com", null));
+        bricks.add(new Center("Habitat ReStore", "1109 East Patrick Street\n" +
                 "Frederick, MD 21701",
-                "(301) 662-2988", null, null);
-        bricks[18] = new Center("Harvest RGI, LLC", "7800 Kabik Court\n" +
+                "(301) 662-2988", null, null));
+        bricks.add(new Center("Harvest RGI, LLC", "7800 Kabik Court\n" +
                 "Woodbine, MD 21797",
-                "(410) 795-7666", "dlundberg@harvestpower.com", "www.harvestpower.com/midatlantic");
-        bricks[19] = new Center("Honeygo Run Reclamation Company", "10710 Philadelphia Road \n" +
+                "(410) 795-7666", "dlundberg@harvestpower.com", "www.harvestpower.com/midatlantic"));
+        bricks.add(new Center("Honeygo Run Reclamation Company", "10710 Philadelphia Road \n" +
                 "Perry Hall, MD 21128",
-                "(410) 335-9500", null, null);
-        bricks[20] = new Center("Key Recycling Center", "3810 fort Armistead Road\n" +
+                "(410) 335-9500", null, null));
+        bricks.add(new Center("Key Recycling Center", "3810 fort Armistead Road\n" +
                 "Baltimore, MD 21226",
-                "(410) 360-5263", "keyrecyclingcenter@gmail.com", null);
-        bricks[21] = new Center("L & J Waste Recycling LLC", "222 N. Calverton Road\n" +
+                "(410) 360-5263", "keyrecyclingcenter@gmail.com", null));
+        bricks.add(new Center("L & J Waste Recycling LLC", "222 N. Calverton Road\n" +
                 "Baltimore, MD 21223",
-                "(410) 566-2323", "lenzie@ljwasterecycling.com", null);
-        bricks[22] = new Center("Lafarge North America (Cockeysville)", "10000 Beaver Dam Road\n" +
+                "(410) 566-2323", "lenzie@ljwasterecycling.com", null));
+        bricks.add(new Center("Lafarge North America (Cockeysville)", "10000 Beaver Dam Road\n" +
                 "Cockeysville, MD 21030",
-                "(410) 683-9000", null, null);
-        bricks[23] = new Center("Lafarge North America (Frederick)", "100 East South Street\n" +
+                "(410) 683-9000", null, null));
+        bricks.add(new Center("Lafarge North America (Frederick)", "100 East South Street\n" +
                 "Frederick, MD 21704",
-                "(301) 694-4819", null, null);
-        bricks[24] = new Center("Lafarge North America (Jessup)", "7970 Old Jessup Road\n" +
+                "(301) 694-4819", null, null));
+        bricks.add(new Center("Lafarge North America (Jessup)", "7970 Old Jessup Road\n" +
                 "Jessup, MD 20794",
-                "(410) 799-4897",  null, null);
-        bricks[25] = new Center("Lafarge North America (Towson)", "300 East Joppa Road, Suite 200\n" +
+                "(410) 799-4897",  null, null));
+        bricks.add(new Center("Lafarge North America (Towson)", "300 East Joppa Road, Suite 200\n" +
                 "Towson, MD 21286",
-                "(410) 847-3300",  "rick.cole@lafargecorpcom", null);
-        //bricks[26] = new Center("", "",
-        //        "", null, null);
+                "(410) 847-3300",  "rick.cole@lafargecorpcom", null));
+        //bricks.add(new Center("", "",
+        //        "", null, null));
     }
 
     public void batteriesInit() {
-        batteries[0] = new Center("Arundel Recycling Center, Inc.", "7517 Connelly Drive\n" +
+        batteries.add(new Center("Arundel Recycling Center, Inc.", "7517 Connelly Drive\n" +
                 "Hanover, MD 21076",
-                "(410) 761-6595", null, "www.arundelrecycling.com");
-        batteries[1] = new Center("B & B Lighting Supply, Inc.", "2901 Druid Park Drive, Suite A110\n" +
+                "(410) 761-6595", null, "www.arundelrecycling.com"));
+        batteries.add(new Center("B & B Lighting Supply, Inc.", "2901 Druid Park Drive, Suite A110\n" +
                 "Baltimore, MD 21215",
-                "(410) 523-7300",  "sbradford@bnblightingsupply.com", null);
-        batteries[2] = new Center("Batteries & Bulbs", "29 East Padonia Road\n" +
+                "(410) 523-7300",  "sbradford@bnblightingsupply.com", null));
+        batteries.add(new Center("Batteries & Bulbs", "29 East Padonia Road\n" +
                 "Timonium, MD 21093",
-                "(410) 628-7999", "BP889@batteriesplus.net", "www.batteriesplusbulbs.com");
-        batteries[3] = new Center("Broadview Waste Services (BWS Inc.)", "7610 Energy Parkway\n" +
+                "(410) 628-7999", "BP889@batteriesplus.net", "www.batteriesplusbulbs.com"));
+        batteries.add(new Center("Broadview Waste Services (BWS Inc.)", "7610 Energy Parkway\n" +
                 "Baltimore, MD 21226",
-                "(410) 437-6590", "info@bwaste.com", "www.bwaste.com");
-        batteries[4] = new Center("Cambridge Iron & Metal Company", "901 South Kresson Street\n" +
+                "(410) 437-6590", "info@bwaste.com", "www.bwaste.com"));
+        batteries.add(new Center("Cambridge Iron & Metal Company", "901 South Kresson Street\n" +
                 "Baltimore, MD 21224",
-                "(410) 327-7867", null, null);
-        batteries[5] = new Center("Clean Venture, Inc.", "2931 Whittington Avenue\n" +
+                "(410) 327-7867", null, null));
+        batteries.add(new Center("Clean Venture, Inc.", "2931 Whittington Avenue\n" +
                 "Baltimore, MD 21230",
-                "(410) 368-9170", "dave.roesler@cyclechem.com", "www.chclechem.com");
-        batteries[6] = new Center("Commercial Retrofitters & Recyclers", "P O Box 1045\n" +
+                "(410) 368-9170", "dave.roesler@cyclechem.com", "www.chclechem.com"));
+        batteries.add(new Center("Commercial Retrofitters & Recyclers", "P O Box 1045\n" +
                 "Dunkirk, MD 20754",
-                "(301) 358-6324", "pgoff@commretrorecycle.com", "www.commretrorecycle.com");
-        batteries[7] = new Center("Eco-Battery, Inc.", "510 McCormick Drive, Suite P-Q\n" +
+                "(301) 358-6324", "pgoff@commretrorecycle.com", "www.commretrorecycle.com"));
+        batteries.add(new Center("Eco-Battery, Inc.", "510 McCormick Drive, Suite P-Q\n" +
                 "Glen Burnie, MD 21061",
-                "888-768-0844", null, "www.eco-batteryinc.com");
-        batteries[8] = new Center("Geller Lighting Supply, Inc.", "3720 Commerce Drive \n" +
+                "888-768-0844", null, "www.eco-batteryinc.com"));
+        batteries.add(new Center("Geller Lighting Supply, Inc.", "3720 Commerce Drive \n" +
                 "Baltimore, MD 21227",
-                "(410) 247-3636", null, null);
-        batteries[9] = new Center("H.D. Metal Company", "909 Boundary Street\n" +
+                "(410) 247-3636", null, null));
+        batteries.add(new Center("H.D. Metal Company", "909 Boundary Street\n" +
                 "Salisbury, MD 21802",
-                "(410) 546-1111",  null, null);
-        batteries[10] = new Center("M.O.U. Enterprises, Inc.", "200 Penrod Court, Suite F\n" +
+                "(410) 546-1111",  null, null));
+        batteries.add(new Center("M.O.U. Enterprises, Inc.", "200 Penrod Court, Suite F\n" +
                 "Glen Burnie, MD 21061",
-                "(410) 648-4072",  "mouenterprisesinc.com", "www.mouenterprisesinc.com");
-        batteries[11] = new Center("Maryland Recycle Company (Elkridge)", "5618 Furnace Avenue\n" +
+                "(410) 648-4072",  "mouenterprisesinc.com", "www.mouenterprisesinc.com"));
+        batteries.add(new Center("Maryland Recycle Company (Elkridge)", "5618 Furnace Avenue\n" +
                 "Elkridge, MD 21075",
-                "(410) 796-0760",  null, null);
-        batteries[12] = new Center("Maryland Recycle Company (Glen Burnie)", "200 8th Avenue, NW\n" +
+                "(410) 796-0760",  null, null));
+        batteries.add(new Center("Maryland Recycle Company (Glen Burnie)", "200 8th Avenue, NW\n" +
                 "Glen Burnie, MD 21061",
-                "(410) 760-9088",  "mdrecycle@aol.com", null);
-        batteries[13] = new Center("Maryland Recycle Company (Owings Mills)", "24 Gwynns Mill Court\n" +
+                "(410) 760-9088",  "mdrecycle@aol.com", null));
+        batteries.add(new Center("Maryland Recycle Company (Owings Mills)", "24 Gwynns Mill Court\n" +
                 "Owings Mills, MD 21117",
-                "(410) 363-3347", "metalprorecycling.com", null);
-        batteries[14] = new Center("Maryland Recycle Company (Rosedale)", "8920 Yellow Brick Road\n" +
+                "(410) 363-3347", "metalprorecycling.com", null));
+        batteries.add(new Center("Maryland Recycle Company (Rosedale)", "8920 Yellow Brick Road\n" +
                 "Rosedale, MD 21237",
-                "(410) 780-3060",  null, null);
-        batteries[15] = new Center("Metal Recyclers, LLC", "8312 Lokus Road\n" +
+                "(410) 780-3060",  null, null));
+        batteries.add(new Center("Metal Recyclers, LLC", "8312 Lokus Road\n" +
                 "Odenton, MD 21113",
-                "(410) 674-2000",  null, "www.metalrecyclersusa.com");
-        batteries[16] = new Center("Ocean City Recycling Center", "210 65th Street\n" +
+                "(410) 674-2000",  null, "www.metalrecyclersusa.com"));
+        batteries.add(new Center("Ocean City Recycling Center", "210 65th Street\n" +
                 "Ocean City, MD 21842",
-                "(410) 524-5356",  null, null);
-        batteries[17] = new Center("Schultz & Sons Salvage", "24769 Meeting House Road\n" +
+                "(410) 524-5356",  null, null));
+        batteries.add(new Center("Schultz & Sons Salvage", "24769 Meeting House Road\n" +
                 "Denton, MD 21629",
-                "(410) 479-2110", "recycle@shore.intercom.net", null);
-        batteries[18] = new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
+                "(410) 479-2110", "recycle@shore.intercom.net", null));
+        batteries.add(new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
                 "Beltsville, MD 20705",
-                "(301) 931-6993",  "kevindaly@turbohaul.com", null);
-        batteries[19] = new Center("Waldorf Metal Company", "P.O. Box 1\n" +
+                "(301) 931-6993",  "kevindaly@turbohaul.com", null));
+        batteries.add(new Center("Waldorf Metal Company", "P.O. Box 1\n" +
                 "Bryantown, MD 20617",
-                "(301) 932-1220",  null, null);
-        //batteries[20] = new Center("", "",
-        //        "",  null, null);
+                "(301) 932-1220",  null, null));
+        //batteries.add(new Center("", "",
+        //        "",  null, null));
     }
 
     private void cardboardInit() {
-        cardboard[0] = new Center("ABC Box Company", "1135 Leadenhall Street\n" +
+        cardboard.add(new Center("ABC Box Company", "1135 Leadenhall Street\n" +
                 "Baltimore, MD 21230 ",
-                "(410) 752-4535",  null, null);
-        cardboard[1] = new Center("", "",
-                "",  null, null);
-        cardboard[2] = new Center("Arc of Washington County, Inc.", "1000 Florida Avenue\n" +
+                "(410) 752-4535",  null, null));
+        cardboard.add(new Center("", "",
+                "",  null, null));
+        cardboard.add(new Center("Arc of Washington County, Inc.", "1000 Florida Avenue\n" +
                 "Hagerstown, MD 21740 ",
-                "(204) 527-2204",  null, null);
-        cardboard[3] = new Center("Baltimore County Resource Recovery Facility", "10320 York Road\n" +
+                "(204) 527-2204",  null, null));
+        cardboard.add(new Center("Baltimore County Resource Recovery Facility", "10320 York Road\n" +
                 "Cockeysville, MD 21030",
-                "(410) 628-1130",  null, null);
-        cardboard[4] = new Center("Banks of Eden Farm", "4318 Allen Road \n" +
+                "(410) 628-1130",  null, null));
+        cardboard.add(new Center("Banks of Eden Farm", "4318 Allen Road \n" +
                 "Salisbury, MD 21801 ",
-                "(410) 749-8994",  null, null);
-        cardboard[5] = new Center("Benjer, Inc.", "P O Box 695\n" +
+                "(410) 749-8994",  null, null));
+        cardboard.add(new Center("Benjer, Inc.", "P O Box 695\n" +
                 "White Marsh, MD 21162",
-                "(410) 335-2267",  null, null);
-        cardboard[6] = new Center("Better Composting, Inc.", "3132 Murray Road \n" +
+                "(410) 335-2267",  null, null));
+        cardboard.add(new Center("Better Composting, Inc.", "3132 Murray Road \n" +
                 "Finksburg, MD 21048",
-                "(410) 833-8330",  null, null);
-        cardboard[7] = new Center("Better Shredder, Inc.", "P O Box 591\n" +
+                "(410) 833-8330",  null, null));
+        cardboard.add(new Center("Better Shredder, Inc.", "P O Box 591\n" +
                 "Williamsport, MD 21795",
-                "(866) 210-5433",  "bettershredder@earthlink.net", null);
-        cardboard[8] = shingles[0]; //Repeat: Brandywine Enterprises
-        cardboard[9] = new Center("CH Recycling Company (Baltimore)", "1532 Thames Street\n" +
+                "(866) 210-5433",  "bettershredder@earthlink.net", null));
+        cardboard.add(shingles.get(0)); //Repeat: Brandywine Enterprises
+        cardboard.add(new Center("CH Recycling Company (Baltimore)", "1532 Thames Street\n" +
                 "Baltimore, MD 21231",
-                "(410) 522-0110",  "jsloan@chrecycling.com", null);
-        cardboard[10] = new Center("Consolidated Waste", "7707 Brookville road\n" +
+                "(410) 522-0110",  "jsloan@chrecycling.com", null));
+        cardboard.add(new Center("Consolidated Waste", "7707 Brookville road\n" +
                 "Chevy Chase, MD 20815",
-                "(202) 269-3303",  null, null);
-        cardboard[11] = new Center("D C Intercel", "1401 Cherry Hill Road\n" +
+                "(202) 269-3303",  null, null));
+        cardboard.add(new Center("D C Intercel", "1401 Cherry Hill Road\n" +
                 "Baltimore, MD 21225",
-                "(410) 355-5800",  null, null);
-        cardboard[12] = bricks[14]; //repeat:Diamond Waste Services
-        cardboard[13] = new Center("Eagle Management Systems, Inc.", "6130 N. Capitol Street NW\n" +
+                "(410) 355-5800",  null, null));
+        cardboard.add(bricks.get(14)); //repeat:Diamond Waste Services
+        cardboard.add(new Center("Eagle Management Systems, Inc.", "6130 N. Capitol Street NW\n" +
                 "Washington, DC 20011",
-                "(202) 291-0200",  null, null);
-        cardboard[14] = new Center("Eagle Recycling LLC", "510 West Road\n" +
+                "(202) 291-0200",  null, null));
+        cardboard.add(new Center("Eagle Recycling LLC", "510 West Road\n" +
                 "Salisbury, MD 21801",
-                "(410) 677-3777",  "kaleb.eagle@gmail.com", null);
-        cardboard[15] = new Center("Eastern Recycling, LLC", "5107 North Point Boulevard\n" +
+                "(410) 677-3777",  "kaleb.eagle@gmail.com", null));
+        cardboard.add(new Center("Eastern Recycling, LLC", "5107 North Point Boulevard\n" +
                 "Sparrows Point, MD 21219",
-                "(410) 477-7500",  "cmehiel@ersmd.com", null);
-        cardboard[16] = new Center("Encore Recycling", "13211 Virginia Manor Road\n" +
+                "(410) 477-7500",  "cmehiel@ersmd.com", null));
+        cardboard.add(new Center("Encore Recycling", "13211 Virginia Manor Road\n" +
                 "Laurel, MD 20707",
-                "(410) 813-2610",  "moniquesampson@hotmail.com", null);
-        cardboard[17] = new Center("Georgetown Paper Stock of Rockville", "14820 Southlawn Lane\n" +
+                "(410) 813-2610",  "moniquesampson@hotmail.com", null));
+        cardboard.add(new Center("Georgetown Paper Stock of Rockville", "14820 Southlawn Lane\n" +
                 "Rockville, MD 20850",
-                "(301) 762-6990",  null, null);
-        cardboard[18] = new Center("H.D. Metal Company", "909 Boundary Street\n" +
+                "(301) 762-6990",  null, null));
+        cardboard.add(new Center("H.D. Metal Company", "909 Boundary Street\n" +
                 "P O Box 1\n" +
                 "Salisbury, MD 21802",
-                "(410) 546-1111",  null, null);
-        cardboard[19] = new Center("Hanna Paper Recycling", "8840 Greenwood Place\n" +
+                "(410) 546-1111",  null, null));
+        cardboard.add(new Center("Hanna Paper Recycling", "8840 Greenwood Place\n" +
                 "Savage, MD 20763",
-                "(301) 604-3302",  null, null);
-        cardboard[20] = new Center("Infinity Recycling, Inc.", "300 Old McGinnis Lane \n" +
+                "(301) 604-3302",  null, null));
+        cardboard.add(new Center("Infinity Recycling, Inc.", "300 Old McGinnis Lane \n" +
                 "Chestertown, MD 21620",
-                "(410) 778-5949",  null, "www.infinityrecycling.org");
-        cardboard[21] = new Center("Integrity Recycling", "7921 Philadelphia Road\n" +
+                "(410) 778-5949",  null, "www.infinityrecycling.org"));
+        cardboard.add(new Center("Integrity Recycling", "7921 Philadelphia Road\n" +
                 "Rosedale, MD 21237",
-                "(410) 866-4000",  null, null);
-        cardboard[22] = new Center("Kline Paper Mill Supplies, Inc.", "9475 Gerwig Lane\n" +
+                "(410) 866-4000",  null, null));
+        cardboard.add(new Center("Kline Paper Mill Supplies, Inc.", "9475 Gerwig Lane\n" +
                 "Columbia, MD 21046",
-                "(410) 381-6363",  null, "www.klinepaper.com");
-        cardboard[23] = bricks[21]; //repeat: L & J
-        cardboard[24] = new Center("Maryland Paper Company", "16151 Elliott Parkway \n" +
+                "(410) 381-6363",  null, "www.klinepaper.com"));
+        cardboard.add(bricks.get(21)); //repeat: L & J
+        cardboard.add(new Center("Maryland Paper Company", "16151 Elliott Parkway \n" +
                 "Williamsport, MD 21795-9803",
-                "(301) 223-6550",  null, "www.marylandpaper.com");
-        cardboard[25] = new Center("Modern Junk & Salvage", "1423 North Freemont Ave. \n" +
+                "(301) 223-6550",  null, "www.marylandpaper.com"));
+        cardboard.add(new Center("Modern Junk & Salvage", "1423 North Freemont Ave. \n" +
                 "Baltimore, MD 21217 ",
-                "(410) 669-8290",  null, null);
-        cardboard[26] = new Center("Nova Services, Inc.", "2500 Grays Road\n" +
+                "(410) 669-8290",  null, null));
+        cardboard.add(new Center("Nova Services, Inc.", "2500 Grays Road\n" +
                 "Baltimore, MD 21222",
-                        "(410) 388-2200",  "dkellermann@novarecycles.com", null);
-        cardboard[27] = new Center("Office Paper Systems, Inc.", "7650 Airpark Road\n" +
+                        "(410) 388-2200",  "dkellermann@novarecycles.com", null));
+        cardboard.add(new Center("Office Paper Systems, Inc.", "7650 Airpark Road\n" +
                 "Gaithersburg, MD 20879-4156",
-                "(301) 948-6301",  null, null);
-        cardboard[28] = new Center("Prince Georges Co. Materials Recovery Facility", "1000 Ritchie Road \n" +
+                "(301) 948-6301",  null, null));
+        cardboard.add(new Center("Prince Georges Co. Materials Recovery Facility", "1000 Ritchie Road \n" +
                 "Capitol Heights, MD 20743",
-                "(301) 499-1707",  null, null);
-        cardboard[29] = shingles[2]; //repeat: Roll-off
-        cardboard[30] = new Center("Secondary Solutions", "P.O. Box 727\n" +
+                "(301) 499-1707",  null, null));
+        cardboard.add(shingles.get(2)); //repeat: Roll-off
+        cardboard.add(new Center("Secondary Solutions", "P.O. Box 727\n" +
                 "Funkstown, MD 21734-0727",
-                "(301) 797-4237",  "ssolut1121@aol.com", null);
-        cardboard[31] = new Center("Simkins Industries, Inc.", "201 River Road \n" +
+                "(301) 797-4237",  "ssolut1121@aol.com", null));
+        cardboard.add(new Center("Simkins Industries, Inc.", "201 River Road \n" +
                 "P.O. Box 3249 \n" +
                 "Catonsville, MD 21228",
-                "(410) 747-5100",  null, null);
-        cardboard[32] = new Center("The Owl Corporation", "1900 Graves Court\n" +
+                "(410) 747-5100",  null, null));
+        cardboard.add(new Center("The Owl Corporation", "1900 Graves Court\n" +
                 "Baltimore, MD 21222",
-                "(410) 282-0067",  "jlpaperbuyer@aol.com", "www.theowlcorp.com");
-        cardboard[33] = shingles[4]; //repeat: Turbohaul
-        cardboard[35] = new Center("Universal Recycling, Inc.", "1000 Ritchie Road\n" +
+                "(410) 282-0067",  "jlpaperbuyer@aol.com", "www.theowlcorp.com"));
+        cardboard.add(shingles.get(4)); //repeat: Turbohaul
+        cardboard.add(new Center("Universal Recycling, Inc.", "1000 Ritchie Road\n" +
                 "Capital Heights, MD 20743-3706",
-                "(301) 336-5932",  null, null);
-        cardboard[36] = new Center("Vangel Paper, Inc.", "3020 Nieman Avenue\n" +
+                "(301) 336-5932",  null, null));
+        cardboard.add(new Center("Vangel Paper, Inc.", "3020 Nieman Avenue\n" +
                 "Baltimore, MD 21230",
-                "(410) 644-2600",  null, "www.vangelpaper.com");
-        cardboard[37] = new Center("Waste Management of MD/Baltimore", "6333 Macaw Court \n" +
+                "(410) 644-2600",  null, "www.vangelpaper.com"));
+        cardboard.add(new Center("Waste Management of MD/Baltimore", "6333 Macaw Court \n" +
                 "Elkridge, MD 21075",
-                "(410) 796-701",  null, null);
-        cardboard[38] = new Center("Westreet Industries", "5107 North Point Blvd. \n" +
+                "(410) 796-701",  null, null));
+        cardboard.add(new Center("Westreet Industries", "5107 North Point Blvd. \n" +
                 "Baltimore, MD 21219",
-                "(410) 477-7500",  null, null);
-        cardboard[39] = new Center("World Recycling, Inc.", "5600 Columbia Park Road \n" +
+                "(410) 477-7500",  null, null));
+        cardboard.add(new Center("World Recycling, Inc.", "5600 Columbia Park Road \n" +
                 "Cheverly, MD 20785",
-                "(301) 386-3010",  null, null);
+                "(301) 386-3010",  null, null));
 
     }
-*/
+
 
     /*
         Pre: A string which matches with a given Center Array
@@ -341,11 +341,11 @@ public class DataStorage {
         if(str.equals("shingles")) {
             return shingles;
         } else if(str.equals("bricks")) {
-          //  return bricks;
+            return bricks;
         } else if(str.equals("batteries")) {
-        //    return batteries;
+            return batteries;
         } else if(str.equals("cardboard")) {
-         //   return cardboard;
+            return cardboard;
         }
 
         return null;
