@@ -19,9 +19,9 @@ public class DataStorage {
     private ArrayList<Center> batteries = new ArrayList<Center>();
     private ArrayList<Center> cardboard = new ArrayList<Center>();
     //private ArrayList<Center> garden = new ArrayList<Center>();
-    private ArrayList<Center> dental = new ArrayList<Center>();
+    //private ArrayList<Center> dental = new ArrayList<Center>(); //Ignoring this for now.
     private ArrayList<Center> electronics = new ArrayList<Center>();
-    private ArrayList<Center> flourescents = new ArrayList<Center>();
+    private ArrayList<Center> fluorescents = new ArrayList<Center>();
     private ArrayList<Center> organics = new ArrayList<Center>();
     private ArrayList<Center> glass = new ArrayList<Center>();
     private ArrayList<Center> gypsum = new ArrayList<Center>();
@@ -49,6 +49,8 @@ public class DataStorage {
         bricksInit();
         batteriesInit();
         cardboardInit();
+        elecInit();
+        lampsInit();
     }
 
 
@@ -327,10 +329,145 @@ public class DataStorage {
         cardboard.add(new Center("World Recycling, Inc.", "5600 Columbia Park Road \n" +
                 "Cheverly, MD 20785",
                 "(301) 386-3010",  null, null));
-
     }
 
+    //May want to add more specific details on the Third page of Electronics... (leave for later)
+    public void elecInit() {
+        electronics.add(new Center("A Better Way Computer Recycling LLC", "6655 Amberton Drive, Suite K\n" +
+                "Elkridge, MD 21075",
+                "(410) 381-5588",  "jeremy@abetterwayrecycling.com", "www.abetterwayrecycling.com"));
+        electronics.add(new Center("AMIT Recycling Solutions, Inc.", "8839 Kelso Drive, Suite E\n" +
+                "Essex, MD 21221",
+                "(443) 393-3371",  "info@amitrecycling.com", null));
+        electronics.add(new Center("Annapolis Office Technologies", "561 E. Central Ave\n" +
+                "Edgewater, MD 21037",
+                "(443) 336-3018", "annapolisrecycling@verizon.net", "annapolisrecycling.com"));
+        electronics.add(new Center("Arundel Computers", "7436 Ritchie Highway\n" +
+                "Glen Burnie, MD 21061",
+                "(410) 766-0862", "www.arundelcomputers.com", null));
+        electronics.add(new Center("Better Shredder, Inc.", "P O Box 591\n" +
+                "Williamsport, MD 21795",
+                "(866) 210-5433", "bettershredder@earthlink.net", null));
+        electronics.add(new Center("BPAI, LLC", "901 Curtain Avenue\n" +
+                "Baltimore, MD 21218",
+                "(410) 662-6380", "bpeters@bpaillc.com", null));
+        electronics.add(new Center("Broadview Waste Services (BWS Inc.)", "7610 Energy Parkway\n" +
+                "Baltimore, MD 21226",
+                "(410) 437-6590", "info@bwaste.com", "www.bwaste.com"));
+        electronics.add(new Center("C.N. Robinson Lighting", "4318 Washington Boulevard\n" +
+                "Baltimore, MD 21227",
+                "(410) 242-4172", "rob@cnrlight.com", null));
+        electronics.add(new Center("Capital Recycling Services", "12036 Old Baltimore Pike\n" +
+                "Beltsville, MD 20705",
+                "(301) 699-6244", null, null));
+        electronics.add(new Center("Capitol Asset Recycling, Inc.", "4721 Boston Way, Suite A\n" +
+                "Lanham, MD 20706",
+                "(240) 696-2572", null, null));
+        electronics.add(new Center("CDM e-Cycling", "500 N. North Point Road\n" +
+                "Baltimore, MD 21237",
+                "(410) 485-4040", "mike@cdm4recycling.com", "www.cdm4recycle.com"));
+        electronics.add(new Center("Cell Phones Fighting Cancer", "P O Box 381\n" +
+                "Millersville, MD 21108",
+                "(443) 494-9205", null, "www.cellphonesfightingcancer.org"));
+        electronics.add(new Center("Chesapeake PC Users Group, Inc.", "1783 Forest Drive, #285\n" +
+                "Annapolis, MD 21403",
+                "(410) 923-1550", "jmmosk@comcast.net", "www.chesapeakepcusersgroup.org"));
+        electronics.add(new Center("Commercial Retrofitters & Recyclers", "P O Box 1045\n" +
+                "Dunkirk, MD 20754",
+                "(301) 358-6324", "pgoff@commretrorecycle.com", "www.commretrorecycle.com"));
+        electronics.add(new Center("Davis Memorial Goodwill Industries", "2200 South Dakota Avenue\n" +
+                "Washington, DC 20018",
+                "(202) 636-4225", "donations@goodwill.org", null));
+        electronics.add(new Center("e-End USA", "2421 Monocacy Blvd., Unit E\n" +
+                "Frederick, MD 21701",
+                "(240) 529-1010", " steve@eendusa.com", "www.eendusa.com"));
+        electronics.add(new Center("Electronic Solution Services", "1923 Lansdowne Road\n" +
+                "Baltimore, MD 21227",
+                "(410) 536-1111", "st@imt-pc.com", null));
+        electronics.add(new Center("eRevival, LLC", "19344 Circle Gate Drive\n" +
+                "Germantown, MD 20874",
+                "(800) 696-8042", "contact@erevival.net", null));
+        electronics.add(new Center("Freedom Electronics Recycling, Inc", "10307 Partnership Court, Suite 200\n" +
+                "Williamsport, MD 21795",
+                "(301) 223-4123",  "rschulman@freedomrecycling.com", null));
+        electronics.add(new Center("Green Computer Recycling Inc.", "1212 East 25th Street\n" +
+                "Baltimore, MD 21218",
+                "(443) 682-7577",  "amalik@recyclegcr.com", "www.recyclegcr.com"));
+        electronics.add(new Center("Lazarus Foundation", "6520 Freetown Road\n" +
+                "Columbia, MD 21044",
+                "(410) 531-8485",  null, "www.lazarus.org"));
+        electronics.add(new Center("Lazarus", "6520 Freetown Road\n" +
+                "Columbia, MD 21044",
+                "(410) 531-8485",  null, "www.lazarus.org"));
+        electronics.add(new Center("Nova Services, Inc.", "2500 Grays Road\n" +
+                "Baltimore, MD 21222",
+                "(410) 388-2200",  "dkellermann@novarecycles.com", null));
+        electronics.add(new Center("Pasadena Recycling, LLC", "7946 Fort Smallwood Road\n" +
+                "Baltimore, MD 21226",
+                "(410) 255-9151",  "linchristian@pasadenarecyclingllc.com", null));
+        electronics.add(new Center("Re-use Barn", "4200 Gardiner Road\n" +
+                "Waldorf, MD 20601",
+                "(301) 645-9451",  null, null));
+        electronics.add(new Center("Retire-IT, LLC", "938 Dennison Avenue\n" +
+                "Columbia, MD 43201",
+                "(614) 522-2301",  null, "www.retire-it.com"));
+        electronics.add(new Center("Second Chance Inc.", "1700 Ridgely Street\n" +
+                "Baltimore, MD 21230",
+                "(410) 385-1101",  "admin@secondchanceinc.org", "www.secondchanceinc.org"));
+        electronics.add(new Center("Securis", "14231 Cherry Lane Court\n" +
+                "Laurel, MD 20707",
+                "(301) 363-4789",  "MD03@securis.com", "www.securis.com/central-maryland-2"));
+        electronics.add(new Center("Securis Baltimore", "8841 Kelso Drive\n" +
+                "Baltimore, MD 21220",
+                "(443) 734-3344",  "gparks@securis.com", "www.securis.com/baltimore"));
+        electronics.add(new Center("ShredStation Express of Maryland", "2731 Deer Ridge Drive\n" +
+                "Silver Spring, MD 20904",
+                "(301) 832-6227",  null, null));
+        electronics.add(new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
+                "Beltsville, MD 20705",
+                "(301) 931-6993",  "kevindaly@turbohaul.com", null));
+        electronics.add(new Center("TurtleWings", "1771 Olive Street\n" +
+                "Capitol Heights, MD 20743",
+                "(301) 583-8399",  "info@turtlewings.com", "www.turtlewings.com"));
+        electronics.add(new Center("UNICOR, Federal Prison Industries, Inc.", "1923 Vermont Avenue, NW\n" +
+                "Washington, DC 20001",
+                "(202) 305-3884",  null, "www.unicor.gov"));
+        electronics.add(new Center("United Way Community Resource Bank", "6620 Amberton Drive\n" +
+                "Elkridge, MD 21075",
+                "(410) 379-5522",  "art.eich@uwcm.org", null));
+    //    electronics.add(new Center("", "",
+    //            "",  null, null));
+    }
 
+    public void lampsInit() {
+        fluorescents.add(new Center("B & B Lighting Supply, Inc.", "2901 Druid Park Drive, Suite A110\n" +
+                "Baltimore, MD 21215",
+                "(410) 523-7300",  "sbradford@bnblightingsupply.com", null));
+        fluorescents.add(new Center("Batteries & Bulbs", "29 East Padonia Road\n" +
+                "Timonium, MD 21093",
+                "(410) 628-7999",  "BP889@batteriesplus.net", "www.batteriesplusbulbs.com"));
+        fluorescents.add(new Center("Broadview Waste Services (BWS Inc.)", "7610 Energy Parkway\n" +
+                "Baltimore, MD 21226",
+                "(410) 437-6590",  "info@bwaste.com", "www.bwaste.com"));
+        fluorescents.add(new Center("C.N. Robinson Lighting", "4318 Washington Boulevard\n" +
+                "Baltimore, MD 21227",
+                "(410) 242-4172",  "rob@cnrlight.com", null));
+        fluorescents.add(new Center("Clean Venture, Inc.", "2931 Whittington Avenue\n" +
+                "Baltimore, MD 21230",
+                "(410) 368-9170",  null, "www.chclechem.com"));
+        fluorescents.add(new Center("Commercial Retrofitters & Recyclers", "P O Box 1045\n" +
+                "Dunkirk, MD 20754",
+                "(301) 358-6324",  "pgoff@commretrorecycle.com", "www.commretrorecycle.com"));
+        fluorescents.add(new Center("EQ-The Environmental Quality Company", "3508-B Fairfield Avenue\n" +
+                "Baltimore, MD 21226",
+                "(410) 354-2221",  null, "www.eqonline.com"));
+        fluorescents.add(new Center("Geller Lighting Supply, Inc.", "3720 Commerce Drive \n" +
+                "Baltimore, MD 21227",
+                "(410) 247-3636",  null, null));
+        fluorescents.add(new Center("Safety Kleen Corporation (Baltimore)", "1448 Desoto Road \n" +
+                "Baltimore, MD 21230",
+                "(410) 525-0001",  null, null));
+    }
     /*
         Pre: A string which matches with a given Center Array
         Post:Returns the array storing the requested type of recycling centers, null if an invalid request -
@@ -346,6 +483,10 @@ public class DataStorage {
             return batteries;
         } else if(str.equals("cardboard")) {
             return cardboard;
+        } else if(str.equals("electronics")) {
+            return electronics;
+        } else if(str.equals("fluorescents") || str.equals("lamps")) {
+            return fluorescents;
         }
 
         return null;

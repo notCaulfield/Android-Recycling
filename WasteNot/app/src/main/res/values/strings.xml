@@ -30,9 +30,11 @@
         <item>Other Materials</item>
     </string-array>
 
+    <string name= "shingles">Asphalt Shingles</string>
+
 
     <string-array name="recycle_array">
-        <item>shingles</item>
+        <item>@string/shingles</item>
         <item>bricks</item>
         <item>batteries</item>
         <item>cardboard</item>
