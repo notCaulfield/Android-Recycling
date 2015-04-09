@@ -15,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends ActionBarActivity {
     private Spinner list;
     private DataStorage data = new DataStorage();
     private boolean isSpinnerTouched = false;
@@ -61,7 +61,7 @@ ArrayList<Center> Shingles;
                     if(!isSpinnerTouched) return;
                     Toast.makeText(parent.getContext(), "Selected Category : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(), ListActivity.class);
-                    i.putExtra("Type", "Shingles");
+                    i.putExtra("Type", parent.getItemAtPosition(pos).toString());
                     startActivity(i);
                 }
 
@@ -71,7 +71,7 @@ ArrayList<Center> Shingles;
                 }
             });
         }
-
+/*
 
     public void onItemSelected(AdapterView<?> parent, View view,
                                int pos, long id) {
@@ -79,7 +79,7 @@ ArrayList<Center> Shingles;
         // parent.getItemAtPosition(pos)
         Toast.makeText(parent.getContext(), "Selected Category : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
         Intent i = new Intent(getApplicationContext(), ListActivity.class);
-        i.putExtra("Type",Shingles);
+        i.putExtra("Type",parent.getItemAtPosition(pos).toString());
         startActivity(i);
     }
 
@@ -87,7 +87,7 @@ ArrayList<Center> Shingles;
         // Another interface callback
     }
 
-
+*/
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.

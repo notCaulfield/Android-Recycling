@@ -17,15 +17,25 @@ import java.util.ArrayList;
 public class ListActivity extends Activity {
     //private Spinner list;
     private DataStorage data = new DataStorage();
-    ArrayList<Center> Shingles;
+    //ArrayList<Center> Shingles;
+    ArrayList<Center> centers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Bundle extras = getIntent().getExtras();
+        String type = null;
+        if (extras != null) { //Don't really need this, but whatever
+            type = extras.getString("Type");
+        }
+
+        centers = data.getType(type);
+
         setContentView(R.layout.activity_list);
-        Shingles = data.getType("shingles");
+        //Shingles = data.getType("shingles");
 
         final ListView lv = (ListView) findViewById(R.id.rcListView);
-        lv.setAdapter(new MyCustomBaseAdapter(this, Shingles));
+        lv.setAdapter(new MyCustomBaseAdapter(this, centers)); //was Shingles
       //  initSpinner();
 
     }

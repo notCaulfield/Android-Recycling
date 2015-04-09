@@ -475,13 +475,13 @@ public class DataStorage {
         //TODO Alphonse, I (or you) can change the String request matches to the official strings.xml versions (i.e. shingles to "Asphalt Shingles") if you would prefer.
      */ //Was Center[]
     public ArrayList<Center> getType(String str) {
-        if(str.equals("shingles")) {
+        if(str.equals("Asphalt Shingles")) {
             return shingles;
-        } else if(str.equals("bricks")) {
+        } else if(str.equals("Asphalt, Bricks and Concrete")) {
             return bricks;
-        } else if(str.equals("batteries")) {
+        } else if(str.equals("Batteries")) {
             return batteries;
-        } else if(str.equals("cardboard")) {
+        } else if(str.equals("Cardboard")) {
             return cardboard;
         } else if(str.equals("electronics")) {
             return electronics;
@@ -489,6 +489,6 @@ public class DataStorage {
             return fluorescents;
         }
 
-        return null;
+        return batteries; //Because
     }
 }

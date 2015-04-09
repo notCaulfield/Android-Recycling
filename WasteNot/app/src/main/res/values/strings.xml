@@ -35,10 +35,10 @@
     <!-- Please take note that we are using this one for the spinner (also needs an update)-->
     <string-array name="recycle_array">
         <item>Select a Type</item>
-        <item>@string/shingles</item>
-        <item>bricks</item>
-        <item>batteries</item>
-        <item>cardboard</item>
+        <item>Asphalt Shingles</item>
+        <item>Asphalt, Bricks and Concrete</item>
+        <item>Batteries</item>
+        <item>Cardboard</item>
     </string-array>
 
     <string name="title_activity_list">ListActivity</string>
