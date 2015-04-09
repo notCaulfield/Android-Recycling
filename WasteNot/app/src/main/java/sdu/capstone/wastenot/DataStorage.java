@@ -51,6 +51,8 @@ public class DataStorage {
         cardboardInit();
         elecInit();
         lampsInit();
+        organicsInit();
+        glassInit();
     }
 
 
@@ -468,11 +470,87 @@ public class DataStorage {
                 "Baltimore, MD 21230",
                 "(410) 525-0001",  null, null));
     }
+
+    private void organicsInit() {
+        organics.add(new Center("Banks of Eden Farm", "4318 Allen Road \n" +
+                "Salisbury, MD 21801",
+                "(410) 749-8994",  null, null));
+        organics.add(new Center("Better Composting, Inc.", "3132 Murray Road \n" +
+                "Finksburg, MD 21048",
+                "(410) 833-8330",  null, null));
+        organics.add(new Center("Earth Wise Compost & Recycling Center", "2209 Cox Road\n" +
+                "Gambrills, MD 21054",
+                "(410) 793-0127",  null, null));
+        organics.add(new Center("Garrity Renewables LLC", "328 Bush Chapel Road\n" +
+                "Aberdeen, MD 21001",
+                "(410) 935-6404",  "justen@garrityrenewables.com", "www.garrityrenewables.com"));
+        organics.add(new Center("Prism Environmental Group, Inc.", "610 Somerset Road, Suite 103\n" +
+                "Baltimore, MD 21210",
+                "(410) 433-5804",  null, "prism@us.net"));
+        organics.add(new Center("Valley Proteins, Inc.", "1515 Open Street \n" +
+                "Baltimore, MD 21226",
+                "(410) 355-4800",  null, null));
+        organics.add(new Center("Waste Neutral", "2901 Waterview Avenue\n" +
+                "Baltimore, MD 21230",
+                "(443) 838-1826",  "keith@wasteneutral.com", null));
+    }
+
+    private void glassInit() {
+        glass.add(new Center("Baltimore County Resource Recovery Facility", "10320 York Road\n" +
+                "Cockeysville, MD 21030",
+                "(410) 628-1130",  null, null));
+        glass.add(new Center("BFI Waste Services, LLC (Hagerstown)", "11710 Green Castle Pike\n" +
+                "Hagerstown, MD 21740",
+                "(301) 223-5952",  null, null));
+        glass.add(new Center("BFI Waste Services, LLC (Baltimore 2)", "5800 Chemical Road\n" +
+                "Baltimore, MD 21226",
+                "(410) 350-0325",  null, null));
+        glass.add(new Center("BFI Waste Services, LLC (Fredrick)", "8145 Reichs Ford Road\n" +
+                "Frederick, MD 21704",
+                "(301) 694-6495",  null, null));
+        glass.add(new Center("Consolidated Waste", "7707 Brookville Road\n" +
+                "Chevy Chase, MD 20815",
+                "(202) 269-3303",  null, null));
+        glass.add(new Center("Design Recycle, Inc.", "4653 Hollins Ferry Road\n" +
+                "Halethorpe, MD 21227",
+                "(202) 374-4863",  null, null));
+        glass.add(new Center("Diamond Waste Services", "508 Glenbrook Road\n" +
+                "Glen Burnie, MD 21061",
+                "(410) 350-7000",  "anita.crehan@diamond-waste.com", null));
+        glass.add(new Center("Eagle Management Systems, Inc.", "6130 N. Capitol Street NW\n" +
+                "Washington, DC 20011",
+                "(202) 291-0200",  null, null));
+        glass.add(new Center("Harford Sanitation", "440 Franklin Street \n" +
+                "Bel Air, MD 21014",
+                "(410) 838-5472",  null, null));
+        glass.add(new Center("Infinity Recycling, Inc.", "300 Old McGinnis Lane \n" +
+                "Chestertown, MD 21620",
+                "(410) 778-5949",  null, "www.infinityrecycling.org"));
+        glass.add(new Center("Montgomery County Material Recovery Facility", "16105 Frederick Avenue \n" +
+                "Derwood, MD 20855",
+                "(301) 417-1433",  null, null));
+        glass.add(new Center("Ocean City Recycling Center", "210 65th Street\n" +
+                "Ocean City, MD 21842",
+                "(410) 524-5356",  null, null));
+        glass.add(new Center("Prince Georges Co. Materials Recovery Facility", "1000 Ritchie Road \n" +
+                "Capitol Heights, MD 20743",
+                "(301) 499-1707",  null, null));
+        glass.add(new Center("Soil Safe, Inc.", "6700 Alexander Bell Drive, Suite 300\n" +
+                "Columbia, MD 21046",
+                "(410) 872-3990",  "info@soilsafe.com", "www.soilsafe.com"));
+        glass.add(new Center("Universal Recycling, Inc.", "1000 Ritchie Road\n" +
+                "Capital Heights, MD 20743-3706",
+                "(301) 336-5932",  null, null));
+        glass.add(new Center("World Recycling, Inc.", "5600 Columbia Park Road \n" +
+                "Cheverly, MD 20785",
+                "(301) 386-3010",  null, null));
+        //glass.add(new Center("", "",
+        //        "",  null, null));
+    }
     /*
-        Pre: A string which matches with a given Center Array
+        Pre: A string which matches with a given Center Array (from the Spinner object - matches the strings in the string.xml)
         Post:Returns the array storing the requested type of recycling centers, null if an invalid request -
         handling is expected on the other side, but there should not ba any invalid requests
-        //TODO Alphonse, I (or you) can change the String request matches to the official strings.xml versions (i.e. shingles to "Asphalt Shingles") if you would prefer.
      */ //Was Center[]
     public ArrayList<Center> getType(String str) {
         if(str.equals("Asphalt Shingles")) {
@@ -487,8 +565,12 @@ public class DataStorage {
             return electronics;
         } else if(str.equals("Fluorescent Lamps") || str.equals("lamps")) {
             return fluorescents;
+        } else if(str.equals("Food Waste and Organics")) {
+            return organics;
+        } else if(str.equals("Glass")) {
+            return glass;
         }
 
-        return batteries; //Because
+        return null; //Because
     }
 }
