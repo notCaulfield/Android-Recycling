@@ -39,6 +39,8 @@
         <item>Asphalt, Bricks and Concrete</item>
         <item>Batteries</item>
         <item>Cardboard</item>
+        <item>Electronics</item>
+        <item>Fluorescent Lamps</item>
     </string-array>
 
     <string name="title_activity_list">ListActivity</string>

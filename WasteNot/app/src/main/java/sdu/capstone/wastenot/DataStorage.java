@@ -224,8 +224,8 @@ public class DataStorage {
         cardboard.add(new Center("ABC Box Company", "1135 Leadenhall Street\n" +
                 "Baltimore, MD 21230 ",
                 "(410) 752-4535",  null, null));
-        cardboard.add(new Center("", "",
-                "",  null, null));
+        //cardboard.add(new Center("", "",
+        //        "",  null, null));
         cardboard.add(new Center("Arc of Washington County, Inc.", "1000 Florida Avenue\n" +
                 "Hagerstown, MD 21740 ",
                 "(204) 527-2204",  null, null));
@@ -483,9 +483,9 @@ public class DataStorage {
             return batteries;
         } else if(str.equals("Cardboard")) {
             return cardboard;
-        } else if(str.equals("electronics")) {
+        } else if(str.equals("Electronics")) {
             return electronics;
-        } else if(str.equals("fluorescents") || str.equals("lamps")) {
+        } else if(str.equals("Fluorescent Lamps") || str.equals("lamps")) {
             return fluorescents;
         }
 
