@@ -1,9 +1,11 @@
 package sdu.capstone.wastenot;
 
+import java.io.Serializable;
+
 /**
  * Created by Holden on 3/15/2015.
  */
-public class Center {
+public class Center implements Serializable {
     private long id;
     private String name = null;
     private String address = null;

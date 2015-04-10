@@ -16,20 +16,15 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
     private Spinner list;
-    private DataStorage data = new DataStorage();
     private boolean isSpinnerTouched = false;
 
-ArrayList<Center> Shingles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Shingles = data.getType("shingles");
 
         initSpinner();
     }
-
-
 
     public void initSpinner() {
         list = (Spinner) findViewById(R.id.list_spinner);

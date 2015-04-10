@@ -53,6 +53,10 @@ public class DataStorage {
         lampsInit();
         organicsInit();
         glassInit();
+        gypsumInit();
+        tonersInit();
+        metalsInit();
+        oilInit();
     }
 
 
@@ -547,30 +551,175 @@ public class DataStorage {
         //glass.add(new Center("", "",
         //        "",  null, null));
     }
+
+    private void gypsumInit() {
+        gypsum.add(new Center("Better Composting, Inc.", "3132 Murray Road \n" +
+                "Finksburg, MD 21048",
+                "(410) 833-8330",  null, null));
+        gypsum.add(new Center("L & J Waste Recycling LLC", "222 N. Calverton Road\n" +
+                "Baltimore, MD 21223",
+                "(410) 566-2323",  "lenzie@ljwasterecycling.com", null));
+        gypsum.add(new Center("United States Gypsum Company", "5500 Quarantine Road \n" +
+                "Baltimore, MD 21226-1621",
+                "(410) 355-6600",  "ccolman@usg.com", null));
+    }
+
+    private void tonersInit() {
+        toners.add(new Center("Annapolis Office Technologies", "561 E. Central Ave\n" +
+                "Edgewater, MD 21037",
+                "(443) 336-3018",  "annapolisrecycling@verizon.net", "www.annapolisrecycling.com"));
+        toners.add(new Center("Atlantic Laser Service", "1826 White Oak Avenue\n" +
+                "Baltimore, MD 21234",
+                "(410) 668-9166",  null, null));
+        toners.add(new Center("Automated Office Products", "9700A Martin Luther King, Jr.\n" +
+                "Lanham, MD 20706",
+                "(301)731-4000",  null, null));
+        toners.add(new Center("Cartridge Technologies, Inc.", "15738 Crabbs Branch Way\n" +
+                "Rockville, MD 20855",
+                "(301) 417-7202",  "anamaria@ctimd.com", "www.ctimd.com"));
+        toners.add(new Center("Cove Manufacturing", "10745-3 Tucker Street \n" +
+                "PO Box 938 \n" +
+                "Beltsville, MD 20705-0938 ",
+                "(800) 368-2769",  null, null));
+        toners.add(new Center("Imaging Supply Depot & Laser Life", "P.O. Box 972\n" +
+                "Mount Airy, MD 21771",
+                "",  "djones@imagingsupplies.com", "www.imagingsupplies.com"));
+        // TODO Above - check to make sure no errors are thrown due to lack of #
+        toners.add(new Center("Litz Green Recycling", "6655-D Mid Cities Avenue\n" +
+                "Beltsville, MD 20705",
+                "(240) 241-7623",  "info@litzgr.com", "www.litzgr.wixcom/54321litz#!"));
+        toners.add(new Center("Printer Solutions", "2137 Defense Highway, Suite 10\n" +
+                "Crofton, MD 21114",
+                "(301) 858-0470",  "rob@printersolutions.com", null));
+        toners.add(new Center("Prism Environmental Group, Inc.", "610 Somerset Road, Suite 103\n" +
+                "Baltimore, MD 21210",
+                "(410) 433-5804",  "prism@us.net", null));
+        toners.add(new Center("Securis", "14231 Cherry Lane Court\n" +
+                "Laurel, MD 20707",
+                "(301) 363-4789",  "MD03@securis.com", "www.securis.com/central-maryland-2/"));
+    }
+
+    private void metalsInit() {
+        metals.add(new Center("1-800-GOT-JUNK?", "12031 Nebel Street\n" +
+                "Rockville, MD 20852",
+                "(800) 468-5865",  "baltimore@1800gotjunk.com", null));
+        metals.add(new Center("1-888 TurboHaul", "11700 Old Baltimore Pike\n" +
+                "Beltsville, MD 20705",
+                "(301) 931-6993",  "kevindaly@turbohaul.com", null));
+        metals.add(new Center("Allegany Scrap, Inc.", "2001 Kenilworth Avenue\n" +
+                "Capital Heights, MD 20743",
+                "(301) 777-2377",  null, null));
+        metals.add(new Center("Allied Waste (Baltimore Processing Center)", "5800 Chemical Road\n" +
+                "Baltimore, MD 21226",
+                "(410) 350-0325",  null, "www.disposal.com"));
+        metals.add(new Center("Allstate Salvage, Inc.", "P O Box 250\n" +
+                "Westover, MD 21871",
+                "(877) 957-4290",  null, null));
+        metals.add(new Center("AMG Resources Corporation", "2415 Grays Road \n" +
+                "Baltimore, MD 21222-5043",
+                "(410) 477-0300",  null, "dmcsweeney@amgresources.com"));
+        metals.add(new Center("Ansam Metals Corporation", "1026 East Patapsco Avenue\n" +
+                "Baltimore, MD 21225-2295",
+                "(410) 355-8220",  "mail@ansammetals.com", null));
+        metals.add(new Center("Arundel Recycling Center, Inc.", "7517 Connelly Drive\n" +
+                "Hanover, MD 21076",
+                "(410) 761-6595",  null, "www.arundelrecycling.com"));
+        metals.add(new Center("Auston Contracting, Inc.", "1202 Pauls Lane\n" +
+                "Joppa, MD 21085",
+                "(410) 335-1016",  null, null));
+        metals.add(new Center("B & S Scrap", "182 Fingerboard Road\n" +
+                "Oakland, MD 21550",
+                "(301) 334-2676",  null, null));
+        metals.add(new Center("Baltimore County Resource Recovery Facility", "10320 York Road\n" +
+                "Cockeysville, MD 21030",
+                "(410) 628-1130",  null, null));
+        metals.add(new Center("Baltimore Scrap Corporation", "3100 Weedon Street \n" +
+                "Baltimore, MD 21226",
+                "(410) 355-4455",  "jross@baltimorescrap.com", "www.baltimorescrap.com"));
+        metals.add(new Center("Benjer, Inc.", "P O Box 695\n" +
+                "White Marsh, MD 21162",
+                "(410) 335-2267",  "benjer@benjerinc.com", null));
+        metals.add(new Center("Berg Recycling", "1401 West Hamburg Street \n" +
+                "Baltimore, MD 21230",
+                "(410) 837-5575",  null, "www.bergrecycling.com"));
+        metals.add(new Center("Better Shredder, Inc.", "P O Box 591\n" +
+                "Williamsport, MD 21795",
+                "(866) 210-5433",  "bettershredder@earthlink.net", null));
+        metals.add(new Center("BFI Waste Services, LLC (Hagerstown)", "11710 Green Castle Pike\n" +
+                "Hagerstown, MD 21740",
+                "(301) 223-5952",  null, null));
+        /*
+        metals.add(new Center("", "",
+                "",  null, null));
+        */
+    }
+
+    private void oilInit() {
+        oil.add(new Center("Broadview Waste Services (BWS Inc.)", "7610 Energy Parkway\n" +
+                "Baltimore, MD 21226",
+                "(410) 437-6590",  "info@bwaste.com", "www.bwaste.com"));
+        oil.add(new Center("C&R Industries Antifreeze Recyclers", "50722 Lafayette Place\n" +
+                "Hyattsville, MD 20781",
+                "(301) 441-4824",  null, null));
+        oil.add(new Center("Clean Venture, Inc.", "2931 Whittington Avenue\n" +
+                "Baltimore, MD 21230",
+                "(410) 368-9170",  null, "www.chclechem.com"));
+        oil.add(new Center("Enviro Pro", "1406 Allwood Lane, Suite T3\n" +
+                "Belcamp, MD 21017",
+                "(855) 900-8473",  null, "www.environmental-pro.com"));
+        oil.add(new Center("EQ-The Environmental Quality Company", "3508-B Fairfield Avenue\n" +
+                "Baltimore, MD 21226",
+                "(410) 354-2221",  null, "www.eqonline.com"));
+        oil.add(new Center("Kroff Materials Reprocessing, Inc.", "4605 Richlynn Drive, Suite 200\n" +
+                "Belcamp, MD 21017",
+                "(410) 272-3993",  "jcipollone@kroffmr.com", null));
+        oil.add(new Center("Safety Kleen Corporation (Baltimore)", "1448 Desoto Road \n" +
+                "Baltimore, MD 21230",
+                "(410) 525-0001",  null, null));
+        oil.add(new Center("Tri-State On Site Recycling", "2000 Hoffmaster Road \n" +
+                "Knoxville, MD 21758",
+                "",  null, null));
+        oil.add(new Center("USA Oil Refining, LLC", "171 Childs Road\n" +
+                "Elkton, MD 21921",
+                "(410) 392-0971",  null, null));
+        /*
+        oil.add(new Center("", "",
+                "",  null, null));
+        */
+    }
+
     /*
         Pre: A string which matches with a given Center Array (from the Spinner object - matches the strings in the string.xml)
         Post:Returns the array storing the requested type of recycling centers, null if an invalid request -
         handling is expected on the other side, but there should not ba any invalid requests
      */ //Was Center[]
     public ArrayList<Center> getType(String str) {
-        if(str.equals("Asphalt Shingles")) {
+        if (str.equals("Asphalt Shingles")) {
             return shingles;
-        } else if(str.equals("Asphalt, Bricks and Concrete")) {
+        } else if (str.equals("Asphalt, Bricks and Concrete")) {
             return bricks;
-        } else if(str.equals("Batteries")) {
+        } else if (str.equals("Batteries")) {
             return batteries;
-        } else if(str.equals("Cardboard")) {
+        } else if (str.equals("Cardboard")) {
             return cardboard;
-        } else if(str.equals("Electronics")) {
+        } else if (str.equals("Electronics")) {
             return electronics;
-        } else if(str.equals("Fluorescent Lamps") || str.equals("lamps")) {
+        } else if (str.equals("Fluorescent Lamps") || str.equals("lamps")) {
             return fluorescents;
-        } else if(str.equals("Food Waste and Organics")) {
+        } else if (str.equals("Food Waste and Organics")) {
             return organics;
-        } else if(str.equals("Glass")) {
+        } else if (str.equals("Glass")) {
             return glass;
+        } else if (str.equals("Gypsum")) {
+            return gypsum;
+        } else if (str.equals("Laser Toner Cartridges")) {
+            return toners;
+        } else if (str.equals("Metals")) {
+            return metals;
+        } else if (str.equals("Motor Oil and Antifreeze")) {
+            return oil;
         }
 
-        return null; //Because
+        return null;
     }
 }

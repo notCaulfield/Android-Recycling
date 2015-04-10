@@ -26,6 +26,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="sdu.capstone.wastenot.MainActivity" />
         </activity>
+        <activity android:name=".DisplayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_display"
+            android:parentActivityName=".ListActivity"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sdu.capstone.wastenot.ListActivity" />
+        </activity>
     </application>
 
 </manifest>

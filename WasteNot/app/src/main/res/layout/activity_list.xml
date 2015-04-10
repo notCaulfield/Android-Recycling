@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Local Recycling Centers" /> <!-- fix this somehow? -->
+        android:text="Local Recycling Centers" />
 
     <ListView
         android:id="@+id/rcListView"
