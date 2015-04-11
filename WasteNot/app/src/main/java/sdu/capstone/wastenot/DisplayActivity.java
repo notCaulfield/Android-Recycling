@@ -26,6 +26,11 @@ public class DisplayActivity extends Activity {
 
         setContentView(R.layout.activity_display);
         final TextView textView = (TextView) findViewById(R.id.displayView);
+
+        //Like this....
         textView.setText(center.getName());
+
+        //Want to remember null checks, and to display:
+        //Name, address (onClick GMaps), phone (call), email (duh), website (link) -- all is interactive
     }
 }
