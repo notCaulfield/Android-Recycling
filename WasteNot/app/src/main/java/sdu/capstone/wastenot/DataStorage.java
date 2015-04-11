@@ -67,7 +67,7 @@ public class DataStorage {
     private void shinglesInit() {
         shingles.add(new Center("Brandywine Enterprises", "5800 Sheriff Road\n" +
                 "Fairmont Heights, MD 20743-6302",
-                "(301) 925-8100", "bmcalwee@brandywineco.com", "Brenda McAlwee"));
+                "(301) 925-8100", "bmcalwee@brandywineco.com", null));
         shingles.add(new Center("Reliable Contracting", "1 Churchview Road\n" +
                 "Millersville, MD 21108",
                 "(410) 987-0313", null, null));
@@ -587,7 +587,7 @@ public class DataStorage {
                 "(800) 368-2769",  null, null));
         toners.add(new Center("Imaging Supply Depot & Laser Life", "P.O. Box 972\n" +
                 "Mount Airy, MD 21771",
-                "",  "djones@imagingsupplies.com", "www.imagingsupplies.com"));
+                null,  "djones@imagingsupplies.com", "www.imagingsupplies.com"));
         // TODO Above - check to make sure no errors are thrown due to lack of #
         toners.add(new Center("Litz Green Recycling", "6655-D Mid Cities Avenue\n" +
                 "Beltsville, MD 20705",
@@ -683,7 +683,8 @@ public class DataStorage {
                 "(410) 525-0001",  null, null));
         oil.add(new Center("Tri-State On Site Recycling", "2000 Hoffmaster Road \n" +
                 "Knoxville, MD 21758",
-                "",  null, null));
+                null,  null, null));
+                //TODO fuck this string
         oil.add(new Center("USA Oil Refining, LLC", "171 Childs Road\n" +
                 "Elkton, MD 21921",
                 "(410) 392-0971",  null, null));
