@@ -31,6 +31,7 @@ public class MainActivity extends ActionBarActivity {
         //list.setSelection(0);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.recycle_array, android.R.layout.simple_spinner_item);
+        //ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(getApplicationContext(), R.layout.spinner_item,R.id.list_spinner);
             // Specify the layout to use when the list of choices appears
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             // Apply the adapter to the spinner

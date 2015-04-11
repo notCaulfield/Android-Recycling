@@ -73,7 +73,7 @@ public class DataStorage {
                 "(410) 987-0313", null, null));
         shingles.add(new Center("Roll-Off Express", "2900 Dede Road \n" +
                 "Finksburg, MD 21048",
-                "((410) 526-3535", "rolloffjack@aol.com", null));
+                "(410) 526-3535", "rolloffjack@aol.com", null));
         shingles.add( new Center("Roofs to Roads", "1005 Rising Ridge Road\n" +
                 "Mt. Airy, MD 21771",
                 "(301) 831-0888", null, "www.fromrooftoroad.com"));
@@ -189,7 +189,7 @@ public class DataStorage {
                 "(301) 358-6324", "pgoff@commretrorecycle.com", "www.commretrorecycle.com"));
         batteries.add(new Center("Eco-Battery, Inc.", "510 McCormick Drive, Suite P-Q\n" +
                 "Glen Burnie, MD 21061",
-                "888-768-0844", null, "www.eco-batteryinc.com"));
+                "(888) 768-0844", null, "www.eco-batteryinc.com"));
         batteries.add(new Center("Geller Lighting Supply, Inc.", "3720 Commerce Drive \n" +
                 "Baltimore, MD 21227",
                 "(410) 247-3636", null, null));

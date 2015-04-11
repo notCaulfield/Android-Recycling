@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
@@ -38,6 +39,8 @@ public class ListActivity extends Activity {
         centers = data.getType(type);
 
         setContentView(R.layout.activity_list);
+        EditText title = (EditText) findViewById(R.id.title);
+        title.setText(type + " Recycling");
 
         final ListView lv = (ListView) findViewById(R.id.rcListView);
         final MyCustomBaseAdapter adapter = new MyCustomBaseAdapter(this, centers);

@@ -8,11 +8,14 @@
     android:orientation="vertical">
 
 
-    <TextView
+    <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
-        android:text="Local Recycling Centers" />
+        android:text="Local Recycling Centers"
+        android:background="@color/green_overlay"
+        android:id="@+id/title"
+        android:editable="false"/>
 
     <ListView
         android:id="@+id/rcListView"

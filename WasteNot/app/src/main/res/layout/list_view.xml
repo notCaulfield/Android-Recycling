@@ -11,9 +11,13 @@ android:paddingTop="10dip" >
     android:id="@+id/name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textColor="#C20000"
-    android:textSize="14sp"
+    android:textColor="#1B5E20"
+    android:textSize="16sp"
     android:textStyle="bold" />
+
+    <!-- 500 is #F44336 -->
+    <!-- Red is #C20000 -->
+    <!-- Green is #1B5E20 -->
 
 <TextView
     android:id="@+id/address"
