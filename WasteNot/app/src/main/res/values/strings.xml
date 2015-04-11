@@ -1,37 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Maryland Recycling Centers</string>
+    <string name="app_name">Maryland Recycling</string>
+    <string name="app_name_center">Maryland Recycling Centers</string>
     <string name="action_settings">Settings</string>
-    <string-array name="hardcoded_recycling">
-        <item>Asphalt Shingles</item>
-        <item>Asphalt, Bricks and Concrete</item>
-        <item>Batteries</item>
-        <item>Cardboard</item>
-        <item>Dental Mercury</item>
-        <item>Electronics</item>
-        <item>Fluorescent Lamps</item>
-        <item>Food Waste and Organics</item>
-        <item>Glass</item>
-        <item>Gypsum</item>
-        <item>Laser Toner Cartridges</item>
-        <item>Metals</item>
-        <item>Motor Oil and Antifreeze</item>
-        <item>Mercury Thermometer</item>
-        <item>Paper and Paper Shredding</item>
-        <item>Plastics</item>
-        <item>Salvage and Reuse</item>
-        <item>Services and Unusual Materials</item>
-        <item>Textiles</item>
-        <item>Tires</item>
-        <item>Wood Pallets</item>
-        <item>Wood</item>
-        <item>Other Materials</item>
-    </string-array>
 
     <string name= "shingles">Asphalt Shingles</string>
 
-    <!-- Please take note that we are using this one for the spinner (also needs an update)-->
+    <!-- Please take note that we are using this one for the spinner -->
     <string-array name="recycle_array">
         <item>Select a Type</item>
         <item>Asphalt Shingles</item>
@@ -46,6 +22,11 @@
         <item>Laser Toner Cartridges</item>
         <item>Metals</item>
         <item>Motor Oil and Antifreeze</item>
+        <item>Paper and Paper Shredding</item>
+        <item>Plastics</item>
+        <item>Textiles</item>
+        <item>Tires</item>
+        <item>Wood Pallets</item>
     </string-array>
 
     <string name="title_activity_list">ListActivity</string>
