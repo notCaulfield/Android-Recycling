@@ -17,7 +17,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Local Recycling Centers"
         android:id="@+id/displayView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/textViewAddress"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:clickable="true"
         android:editable="false" />
 
@@ -35,7 +35,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="No Phone Number Given"
         android:id="@+id/textViewPhone"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:clickable="true" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="No Email Given"
         android:id="@+id/textViewEmail"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:clickable="true" />
 
     <TextView
@@ -53,7 +53,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="No Website Given"
         android:id="@+id/textViewWebsite"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:clickable="true" />
 
 
