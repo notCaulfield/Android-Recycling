@@ -160,7 +160,7 @@ public class DataStorage {
                 "(410) 799-4897",  null, null));
         bricks.add(new Center("Lafarge North America (Towson)", "300 East Joppa Road, Suite 200\n" +
                 "Towson, MD 21286",
-                "(410) 847-3300",  "rick.cole@lafargecorpcom", null));
+                "(410) 847-3300",  "rick.cole@lafargecorp.com", null));
         //bricks.add(new Center("", "",
         //        "", null, null));
     }
