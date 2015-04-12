@@ -101,7 +101,7 @@ public class DataStorage {
         bricks.add(new Center("Baltimore Recycling Center", "1030 Edison Highway\n" +
                 "Baltimore, MD 21213",
                 "(410) 534-2990",  null, null));
-        bricks.add(new Center("Barnabas Stone", "4714 Clifton road\n" +
+        bricks.add(new Center("Barnabas Stone", "4714 Clifton Road\n" +
                 "Temple Hills, MD 20784",
                 "(301) 423-1200",  null, null));
         bricks.add(new Center("Benjer, Inc.", "P O Box 695\n" +
@@ -143,7 +143,7 @@ public class DataStorage {
         bricks.add(new Center("Honeygo Run Reclamation Company", "10710 Philadelphia Road \n" +
                 "Perry Hall, MD 21128",
                 "(410) 335-9500", null, null));
-        bricks.add(new Center("Key Recycling Center", "3810 fort Armistead Road\n" +
+        bricks.add(new Center("Key Recycling Center", "3810 Fort Armistead Road\n" +
                 "Baltimore, MD 21226",
                 "(410) 360-5263", "keyrecyclingcenter@gmail.com", null));
         bricks.add(new Center("L & J Waste Recycling LLC", "222 N. Calverton Road\n" +
@@ -406,9 +406,9 @@ public class DataStorage {
         electronics.add(new Center("Lazarus Foundation", "6520 Freetown Road\n" +
                 "Columbia, MD 21044",
                 "(410) 531-8485",  null, "www.lazarus.org"));
-        electronics.add(new Center("Lazarus", "6520 Freetown Road\n" +
-                "Columbia, MD 21044",
-                "(410) 531-8485",  null, "www.lazarus.org"));
+        //electronics.add(new Center("Lazarus", "6520 Freetown Road\n" +
+        //        "Columbia, MD 21044",
+        //        "(410) 531-8485",  null, "www.lazarus.org"));
         electronics.add(new Center("Nova Services, Inc.", "2500 Grays Road\n" +
                 "Baltimore, MD 21222",
                 "(410) 388-2200",  "dkellermann@novarecycles.com", null));
