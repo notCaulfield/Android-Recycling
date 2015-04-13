@@ -17,7 +17,15 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Local Recycling Centers"
         android:id="@+id/displayView"
+<<<<<<< HEAD
         android:layout_gravity="center" />
+=======
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="@color/green_overlay"
+        android:paddingBottom="10dp"
+        android:paddingTop="6dp" />
+>>>>>>> origin/master
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,15 +33,21 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Medium Text"
         android:id="@+id/textViewAddress"
+<<<<<<< HEAD
         android:layout_gravity="center"
+=======
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+>>>>>>> origin/master
         android:clickable="true"
-        android:editable="false" />
+        android:editable="false"
+        android:paddingBottom="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="No Phone Number Given"
+        android:text="No Phone Number Available"
         android:id="@+id/textViewPhone"
         android:layout_gravity="center"
         android:clickable="true" />
@@ -42,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="No Email Given"
+        android:text="No Email Available"
         android:id="@+id/textViewEmail"
         android:layout_gravity="center"
         android:clickable="true" />
@@ -51,10 +65,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="No Website Given"
         android:id="@+id/textViewWebsite"
+<<<<<<< HEAD
         android:layout_gravity="center"
         android:clickable="true" />
+=======
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:singleLine="false"
+        android:text="               " />
+>>>>>>> origin/master
 
 
 </LinearLayout>

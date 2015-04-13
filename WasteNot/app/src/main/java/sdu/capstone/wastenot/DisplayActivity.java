@@ -37,6 +37,7 @@ public class DisplayActivity extends Activity {
         textView.setText(center.getName());
 
         final String address = center.getAddress();
+        //address.replace('\n', ' ');
         final TextView textViewAddress = (TextView) findViewById(R.id.textViewAddress);
         textViewAddress.setText(address);
         textViewAddress.setOnClickListener(new View.OnClickListener() {
