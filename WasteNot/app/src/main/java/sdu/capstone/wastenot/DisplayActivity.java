@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
@@ -40,6 +41,7 @@ public class DisplayActivity extends Activity {
         //address.replace('\n', ' ');
         final TextView textViewAddress = (TextView) findViewById(R.id.textViewAddress);
         textViewAddress.setText(address);
+        //textViewAddress.setText(Html.fromHtml("<u>" + address + "</u>"));
         textViewAddress.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 address.replace(' ', '+');
@@ -54,7 +56,8 @@ public class DisplayActivity extends Activity {
         final String phoneNumber = center.getPhone();
         if(phoneNumber != null) {
             final TextView textViewPhone = (TextView) findViewById(R.id.textViewPhone);
-            textViewPhone.setText(phoneNumber);
+           // textViewPhone.setText(phoneNumber);
+            textViewPhone.setText(Html.fromHtml("<u>" + phoneNumber + "</u>"));
             textViewPhone.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber));
@@ -66,7 +69,8 @@ public class DisplayActivity extends Activity {
         final String email = center.getEmail();
         if(email != null) {
             final TextView textViewEmail = (TextView) findViewById(R.id.textViewEmail);
-            textViewEmail.setText(email);
+           // textViewEmail.setText(email);
+            textViewEmail.setText(Html.fromHtml("<u>" + email + "</u>"));
             textViewEmail.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_SEND);
@@ -81,7 +85,8 @@ public class DisplayActivity extends Activity {
         final String website = center.getWebsite();
         if(website != null) {
             final TextView textViewWebsite = (TextView) findViewById(R.id.textViewWebsite);
-            textViewWebsite.setText(website);
+         //   textViewWebsite.setText(website);
+            textViewWebsite.setText(Html.fromHtml("<u>" + website + "</u>"));
             textViewWebsite.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Uri webpage = Uri.parse("http:" + website);
