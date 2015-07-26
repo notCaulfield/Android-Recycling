@@ -1,6 +1,11 @@
 package sdu.capstone.wastenot;
 
+import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
+
 import java.io.Serializable;
+import java.util.Locale;
 
 /**
  * Created by Holden on 3/15/2015.
@@ -13,17 +18,21 @@ public class Center implements Serializable {
     //private String fax = null;
     private String email = null;
     private String website = null;
+    //private Address loc = null; //For Lat-Long calcs
+    Geocoder geo = null;
    /// private String[] types = null; // Storing types by external array Very Important (create separately for safety)
 
 
     //If an element is not present, null will be in it's place
-    public Center(String name, String address, String phone,/* String fax,*/ String email, String website) {
+    public Center(String name, String address, String phone,/* String fax,*/ String email, String website, Context context) {
         this.name = name;
         this.address = address;
         this.phone = phone;
        // this.fax = fax;
         this.email = email;
         this.website = website;
+        geo = new Geocoder(context);
+      //  this.loc = new Address(new Locale())
     }
 
     //Returns String Array
@@ -38,6 +47,12 @@ public class Center implements Serializable {
 
     //Once made we only need to get values, not change them - thus only getters
     //If a getter returns null, then do not display for that value
+
+    //This is a terrible hack - which was never used thankfully
+    public Center setGeocoderContext(Context context) {
+        geo = new Geocoder(context);
+        return this;
+    }
 
     public String getWebsite() {
 

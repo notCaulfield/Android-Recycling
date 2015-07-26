@@ -1,5 +1,6 @@
 package sdu.capstone.wastenot;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;

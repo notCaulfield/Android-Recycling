@@ -2,6 +2,7 @@ package sdu.capstone.wastenot;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.internal.widget.AdapterViewCompat;
@@ -21,10 +22,12 @@ import java.util.ArrayList;
  * Created by Holden on 4/9/2015.
  */
 public class ListActivity extends Activity {
-    private DataStorage data = new DataStorage();
+
     ArrayList<Center> centers;
+   // Geocoder geocoder = new Geocoder(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        DataStorage data = new DataStorage(getApplicationContext());
         super.onCreate(savedInstanceState);
 
         //Remove title bar
