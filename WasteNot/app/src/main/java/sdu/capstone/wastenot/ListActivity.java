@@ -22,12 +22,12 @@ import java.util.ArrayList;
  * Created by Holden on 4/9/2015.
  */
 public class ListActivity extends Activity {
-
+    DataStorage data = new DataStorage();
     ArrayList<Center> centers;
    // Geocoder geocoder = new Geocoder(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        DataStorage data = new DataStorage(getApplicationContext());
+
         super.onCreate(savedInstanceState);
 
         //Remove title bar
