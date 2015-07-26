@@ -44,7 +44,7 @@ public class DataStorage {
    // Context context = app.getAppContext();
 
     public DataStorage() {
-        init();
+        //init();
     }
 
     private void init() {
@@ -111,7 +111,9 @@ public class DataStorage {
         bricks.add(new Center("Benjer, Inc.", "P O Box 695\n" +
                 "White Marsh, MD 21162",
                 "(410) 335-2267", "benjer@benjerinc.com", null));
-        bricks.add(shingles.get(0)); //Repeat: Brandywine Enterprises
+        bricks.add(new Center("Brandywine Enterprises", "5800 Sheriff Road\n" +
+                "Fairmount Heights, MD 20743-6302",
+                "(301) 925-8100", "bmcalwee@brandywineco.com", null)); //Repeat: Brandywine Enterprises
         bricks.add(new Center("Clean Earth of Maryland, Inc.", "1469 Oak Ridge Place\n" +
                 "Hagerstown, MD 21742",
                 null, "cleanrock@aol.com", null));
@@ -258,7 +260,9 @@ public class DataStorage {
         cardboard.add(new Center("Better Shredder, Inc.", "P O Box 591\n" +
                 "Williamsport, MD 21795",
                 "(866) 210-5433",  "bettershredder@earthlink.net", null));
-        cardboard.add(shingles.get(0)); //Repeat: Brandywine Enterprises
+        cardboard.add(new Center("Brandywine Enterprises", "5800 Sheriff Road\n" +
+                "Fairmount Heights, MD 20743-6302",
+                "(301) 925-8100", "bmcalwee@brandywineco.com", null)); //Repeat: Brandywine Enterprises
         cardboard.add(new Center("CH Recycling Company (Baltimore)", "1532 Thames Street\n" +
                 "Baltimore, MD 21231",
                 "(410) 522-0110",  "jsloan@chrecycling.com", null));
@@ -268,7 +272,9 @@ public class DataStorage {
         cardboard.add(new Center("D C Intercel", "1401 Cherry Hill Road\n" +
                 "Baltimore, MD 21225",
                 "(410) 355-5800",  null, null));
-        cardboard.add(bricks.get(14) ); //repeat:Diamond Waste Services
+        cardboard.add(new Center("Diamond Waste Services", "508 Glenbrook Road\n" +
+                "Glen Burnie, MD 21061",
+                "(410) 350-7000",  "anita.crehan@diamond-waste.com", null)); //repeat:Diamond Waste Services
         cardboard.add(new Center("Eagle Management Systems, Inc.", "6130 N. Capitol Street NW\n" +
                 "Washington, DC 20011",
                 "(202) 291-0200",  null, null));
@@ -300,7 +306,9 @@ public class DataStorage {
         cardboard.add(new Center("Kline Paper Mill Supplies, Inc.", "9475 Gerwig Lane\n" +
                 "Columbia, MD 21046",
                 "(410) 381-6363",  null, "www.klinepaper.com"));
-        cardboard.add(bricks.get(21) ); //repeat: L & J
+        cardboard.add(new Center("L & J Waste Recycling LLC", "222 N. Calverton Road\n" +
+                "Baltimore, MD 21223",
+                "(410) 566-2323", "lenzie@ljwasterecycling.com", null)); //repeat: L & J
         cardboard.add(new Center("Maryland Paper Company", "16151 Elliott Parkway \n" +
                 "Williamsport, MD 21795-9803",
                 "(301) 223-6550",  null, "www.marylandpaper.com"));
@@ -316,7 +324,9 @@ public class DataStorage {
         cardboard.add(new Center("Prince Georges Co. Materials Recovery Facility", "1000 Ritchie Road \n" +
                 "Capitol Heights, MD 20743",
                 "(301) 499-1707",  null, null));
-        cardboard.add(shingles.get(2)); //repeat: Roll-off
+        cardboard.add(new Center("Roll-Off Express", "2900 Dede Road \n" +
+                "Finksburg, MD 21048",
+                "(410) 526-3535", "rolloffjack@aol.com", null)); //repeat: Roll-off
         cardboard.add(new Center("Secondary Solutions", "P.O. Box 727\n" +
                 "Funkstown, MD 21734-0727",
                 "(301) 797-4237",  "ssolut1121@aol.com", null));
@@ -327,7 +337,9 @@ public class DataStorage {
         cardboard.add(new Center("The Owl Corporation", "1900 Graves Court\n" +
                 "Baltimore, MD 21222",
                 "(410) 282-0067",  "jlpaperbuyer@aol.com", "www.theowlcorp.com"));
-        cardboard.add(shingles.get(4)); //repeat: Turbohaul
+        cardboard.add(new Center("TurboHaul", "11700 Old Baltimore Pike\n" +
+                "Beltsville, MD 20705",
+                "(301) 931-6993",  "kevindaly@turbohaul.com", null)); //repeat: Turbohaul
         cardboard.add(new Center("Universal Recycling, Inc.", "1000 Ritchie Road\n" +
                 "Capital Heights, MD 20743-3706",
                 "(301) 336-5932",  null, null));
@@ -990,38 +1002,55 @@ public class DataStorage {
      */ //Was Center[]
     public ArrayList<Center> getType(String str) {
         if (str.equals("Asphalt Shingles")) {
+            shinglesInit();
             return shingles;
         } else if (str.equals("Asphalt, Bricks and Concrete")) {
+            bricksInit();
             return bricks;
         } else if (str.equals("Batteries")) {
+            batteriesInit();
             return batteries;
         } else if (str.equals("Cardboard")) {
+            cardboardInit();
             return cardboard;
         } else if (str.equals("Electronics")) {
+            elecInit();
             return electronics;
         } else if (str.equals("Fluorescent Lamps") || str.equals("lamps")) {
+            lampsInit();
             return fluorescents;
         } else if (str.equals("Food Waste and Organics")) {
+            organicsInit();
             return organics;
         } else if (str.equals("Glass")) {
+            glassInit();
             return glass;
         } else if (str.equals("Gypsum")) {
+            gypsumInit();
             return gypsum;
         } else if (str.equals("Laser Toner Cartridges")) {
+            tonersInit();
             return toners;
         } else if (str.equals("Metals")) {
+            metalsInit();
             return metals;
         } else if (str.equals("Motor Oil and Antifreeze")) {
+            oilInit();
             return oil;
         } else if (str.equals("Paper and Paper Shredding")) {
+            paperInit();
             return paper;
         } else if (str.equals("Plastics")) {
+            plasticsInit();
             return plastics;
         } else if (str.equals("Textiles")) {
+            textInit();
             return textiles;
         } else if (str.equals("Tires")) {
+            tiresInit();
             return tires;
         } else if (str.equals("Wood Pallets")) {
+            palletsInit();
             return pallets;
         }
 
