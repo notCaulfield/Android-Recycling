@@ -8,16 +8,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 import android.widget.AdapterView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 
 public class MainActivity extends ActionBarActivity {
     private Spinner list;
     private boolean isSpinnerTouched = false;
+    private ToggleButton toggle;
+    private boolean sortByLocation = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,22 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         initSpinner();
+        initButton();
+    }
+
+    public void initButton() {
+        toggle = (ToggleButton) findViewById(R.id.toggleButton);
+
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                sortByLocation = isChecked;
+                /*if (sortByLocation) {
+                    System.out.println("Location");
+                } else {
+                    System.out.println("Alphabetical");
+                }*/
+            }
+        });
     }
 
     public void initSpinner() {
@@ -56,6 +77,7 @@ public class MainActivity extends ActionBarActivity {
                         Toast.makeText(parent.getContext(), "Selected Category : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(getApplicationContext(), ListActivity.class);
                         i.putExtra("Type", parent.getItemAtPosition(pos).toString());
+                        i.putExtra("SortBy", sortByLocation);
                         startActivity(i);
                     }
                 }

@@ -35,8 +35,10 @@ public class ListActivity extends Activity {
 
         Bundle extras = getIntent().getExtras();
         String type = null;
+        boolean sortBy = false; //false is the default Alphabetical Order
         if (extras != null) { //Don't really need this, but whatever
             type = extras.getString("Type");
+            sortBy = extras.getBoolean("SortBy");
         }
 
         centers = data.getType(type);

@@ -4,6 +4,8 @@
     <string name="app_name">Maryland Recycling</string>
     <string name="app_name_center">Maryland Recycling Centers</string>
     <string name="action_settings">Settings</string>
+    <string name="sort_prompt">Sort By:</string>
+    <string name="switch_string">Sort by Location</string>
 
     <string name= "shingles">Asphalt Shingles</string>
 
