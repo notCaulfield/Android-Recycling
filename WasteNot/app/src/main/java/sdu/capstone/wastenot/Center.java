@@ -23,42 +23,24 @@ public class Center implements Serializable {
     private String email = null;
     private String website = null;
    // private List<Address> locs = null; //For Lat-Long calcs
-    private double lat, lng;
+    private double lat, lng = 0;
    // Geocoder geo = null;
     //LatLng point = null;
    /// private String[] types = null; // Storing types by external array Very Important (create separately for safety)
 
 
     //If an element is not present, null will be in it's place
-    public Center(String name, String address, String phone,/* String fax,*/ String email, String website) {
+    public Center(String name, String address, String phone,/* String fax,*/ String email, String website, double lat, double lng) {
         this.name = name;
         this.address = address;
         this.phone = phone;
        // this.fax = fax;
         this.email = email;
         this.website = website;
-       // geo = new Geocoder(context);
-      //  try {
-       //     locs = geo.getFromLocationName(address, 5);
-       //     if(locs.size() > 0) {
-        //        lat = locs.get(0).getLatitude();
-        //        lng = locs.get(0).getLongitude();
-        //    }
-        //}  catch (IOException e) {
-            //
-        //}
-      //  this.loc = new Address(new Locale())
+        this.lat = lat;
+        this.lng = lng;
     }
 
-    //Returns String Array
-    /*public String[] getTypes() {
-        return types;
-    }
-
-    //Takes in String Array containing types of materials accepted
-    public void setType(String[] str) {
-        types = str;
-    }*/
 
     //Once made we only need to get values, not change them - thus only getters
     //If a getter returns null, then do not display for that value
