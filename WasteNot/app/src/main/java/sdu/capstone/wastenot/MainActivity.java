@@ -2,8 +2,10 @@ package sdu.capstone.wastenot;
 
 import android.content.Context;
 import android.content.Intent;
+import android.location.Location;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -14,21 +16,33 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends ActionBarActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     private Spinner list;
     private boolean isSpinnerTouched = false;
     private ToggleButton toggle;
     private boolean sortByLocation = false;
+    protected GoogleApiClient mGoogleApiClient;
+    protected Location mLastLocation;
+    protected TextView mLatitudeText;
+    protected TextView mLongitudeText;
+
+    protected static final String TAG = "recycle-main";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        buildGoogleApiClient();
         initSpinner();
         initButton();
     }
@@ -69,22 +83,22 @@ public class MainActivity extends ActionBarActivity {
         });
 
 
-            list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                    if(!isSpinnerTouched) return;
-                    if(!parent.getItemAtPosition(pos).toString().equals("Select a Type")) {
-                        Toast.makeText(parent.getContext(), "Selected Category : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), ListActivity.class);
-                        i.putExtra("Type", parent.getItemAtPosition(pos).toString());
-                        i.putExtra("SortBy", sortByLocation);
-                        startActivity(i);
-                    }
+        list.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                if (!isSpinnerTouched) return;
+                if (!parent.getItemAtPosition(pos).toString().equals("Select a Type")) {
+                    Toast.makeText(parent.getContext(), "Selected Category : " + parent.getItemAtPosition(pos).toString(), Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(getApplicationContext(), ListActivity.class);
+                    i.putExtra("Type", parent.getItemAtPosition(pos).toString());
+                    i.putExtra("SortBy", sortByLocation);
+                    startActivity(i);
                 }
+            }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-                    // Another interface callback
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Another interface callback
                 }
             });
         }
@@ -109,5 +123,36 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+    }
+
+    @Override
+    //When connected, get current lat and lng
+    public void onConnected(Bundle bundle) {
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        if (mLastLocation != null) {
+            mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
+            mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
+        } else {
+            Toast.makeText(this, R.string.no_location_detected, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        Log.i(TAG, "Connection suspended");
+        mGoogleApiClient.connect(); //Attempt to reconnect
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult result) { //Print error on failure
+        Log.i(TAG, "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
     }
 }
