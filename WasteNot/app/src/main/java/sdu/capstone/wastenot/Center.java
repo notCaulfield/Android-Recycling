@@ -24,6 +24,7 @@ public class Center implements Serializable {
     private String website = null;
    // private List<Address> locs = null; //For Lat-Long calcs
     private double lat, lng = 0;
+    private double distance = 0;
    // Geocoder geo = null;
     //LatLng point = null;
    /// private String[] types = null; // Storing types by external array Very Important (create separately for safety)
@@ -92,6 +93,12 @@ public class Center implements Serializable {
 
     public double getLng() {
         return lng;
+    }
+
+    public double getDistance() { return distance; }
+
+    public void calcDistance(double currLat, double currLong) {
+        //TODO -- MATH
     }
 
 }

@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class ListActivity extends Activity {
     DataStorage data = new DataStorage();
     ArrayList<Center> centers;
+    double currLat, currLng = 0;
    // Geocoder geocoder = new Geocoder(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,12 @@ public class ListActivity extends Activity {
         }
 
         centers = data.getType(type);
+
+        if(sortBy) { //Execute if sortBy is true - sortBy location/distance
+            for(Center location : centers) {
+                location.calcDistance(currLat, currLng);
+            }
+        }
 
         setContentView(R.layout.activity_list);
         EditText title = (EditText) findViewById(R.id.title);
