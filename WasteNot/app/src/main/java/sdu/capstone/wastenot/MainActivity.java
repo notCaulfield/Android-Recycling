@@ -43,6 +43,7 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
         setContentView(R.layout.activity_main);
 
         buildGoogleApiClient();
+       // onConnected();
         initSpinner();
         initButton();
     }
@@ -92,6 +93,7 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
                     Intent i = new Intent(getApplicationContext(), ListActivity.class);
                     i.putExtra("Type", parent.getItemAtPosition(pos).toString());
                     i.putExtra("SortBy", sortByLocation);
+                    i.putExtra("Location", mLastLocation);
                     startActivity(i);
                 }
             }
@@ -99,8 +101,8 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Another interface callback
-                }
-            });
+            }
+        });
         }
 
         @Override
@@ -134,15 +136,34 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        mGoogleApiClient.connect();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
+    }
+
+    @Override
     //When connected, get current lat and lng
+    /**
+     * Runs when a GoogleApiClient object successfully connects.
+     */
     public void onConnected(Bundle bundle) {
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        if (mLastLocation != null) {
+        /*if (mLastLocation != null) {
+        //    System.out.println(mLastLocation.getLatitude());
             mLatitudeText.setText(String.valueOf(mLastLocation.getLatitude()));
             mLongitudeText.setText(String.valueOf(mLastLocation.getLongitude()));
         } else {
             Toast.makeText(this, R.string.no_location_detected, Toast.LENGTH_LONG).show();
-        }
+        }*/
+        //System.out.println("HELLO");
     }
 
     @Override

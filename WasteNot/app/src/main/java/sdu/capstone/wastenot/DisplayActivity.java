@@ -35,6 +35,7 @@ public class DisplayActivity extends Activity {
         final TextView textView = (TextView) findViewById(R.id.displayView);
 
         //Like this....
+       // textView.setText(center.getName() + center.getDistance()); //getDistance is present for debugging
         textView.setText(center.getName());
 
         final String address = center.getAddress();

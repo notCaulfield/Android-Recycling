@@ -3,6 +3,7 @@ package sdu.capstone.wastenot;
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
+import android.location.Location;
 
 //import com.google.android.gms.maps.model.LatLng;
 
@@ -97,8 +98,14 @@ public class Center implements Serializable {
 
     public double getDistance() { return distance; }
 
-    public void calcDistance(double currLat, double currLong) {
+    public void calcDistance(Location currLocation) {
         //TODO -- MATH
+        Location centerLocation = new Location(""); //Provider name is not needed
+        centerLocation.setLatitude(lat);
+        centerLocation.setLongitude(lng);
+        System.out.println(currLocation);
+        System.out.println(centerLocation);
+        distance = currLocation.distanceTo(centerLocation);
     }
 
 }

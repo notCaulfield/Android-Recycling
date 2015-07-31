@@ -3,6 +3,7 @@ package sdu.capstone.wastenot;
 import android.app.Activity;
 import android.content.Intent;
 import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.internal.widget.AdapterViewCompat;
@@ -45,8 +46,9 @@ public class ListActivity extends Activity {
         centers = data.getType(type);
 
         if(sortBy) { //Execute if sortBy is true - sortBy location/distance
+            Location currLocation = (Location) extras.get("Location"); //Should work
             for(Center location : centers) {
-                location.calcDistance(currLat, currLng);
+                location.calcDistance(currLocation);
             }
         }
 
