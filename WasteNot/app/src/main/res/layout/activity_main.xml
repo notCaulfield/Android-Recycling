@@ -26,14 +26,24 @@
         android:entries="@array/recycle_array"
         android:textColor="@color/green_overlay" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/sort_prompt"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/green_overlay"
+        android:textStyle="bold" />
+
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New ToggleButton"
         android:id="@+id/toggleButton"
         android:layout_gravity="center_horizontal"
-        android:textOff="Alphabetical"
-        android:textOn="    Location   " />
+        android:textOff=" Name "
+        android:textOn=" Location " />
 
 
 </LinearLayout>

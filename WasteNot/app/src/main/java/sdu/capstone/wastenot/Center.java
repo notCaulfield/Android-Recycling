@@ -103,8 +103,8 @@ public class Center implements Serializable {
         Location centerLocation = new Location(""); //Provider name is not needed
         centerLocation.setLatitude(lat);
         centerLocation.setLongitude(lng);
-        System.out.println(currLocation);
-        System.out.println(centerLocation);
+       // System.out.println(currLocation);
+       // System.out.println(centerLocation);
         distance = currLocation.distanceTo(centerLocation);
     }
 
