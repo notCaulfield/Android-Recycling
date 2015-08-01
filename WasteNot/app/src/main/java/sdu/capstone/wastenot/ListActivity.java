@@ -2,7 +2,6 @@ package sdu.capstone.wastenot;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -18,10 +17,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.TreeSet;
 
 /**
  * Created by Holden on 4/9/2015.
@@ -29,8 +25,6 @@ import java.util.TreeSet;
 public class ListActivity extends Activity {
     DataStorage data = new DataStorage();
     ArrayList<Center> centers;
-    double currLat, currLng = 0;
-   // Geocoder geocoder = new Geocoder(getApplicationContext());
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

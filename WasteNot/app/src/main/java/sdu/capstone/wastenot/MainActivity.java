@@ -1,6 +1,6 @@
 package sdu.capstone.wastenot;
 
-import android.content.Context;
+
 import android.content.Intent;
 import android.location.Location;
 import android.support.v7.app.ActionBarActivity;
@@ -10,11 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
-import java.util.ArrayList;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,9 +30,6 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
     private boolean sortByLocation = false;
     protected GoogleApiClient mGoogleApiClient;
     protected Location mLastLocation;
-    protected TextView mLatitudeText;
-    protected TextView mLongitudeText;
-
     protected static final String TAG = "recycle-main";
 
     @Override

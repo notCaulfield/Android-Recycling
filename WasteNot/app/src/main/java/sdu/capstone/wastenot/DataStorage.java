@@ -1,19 +1,16 @@
 package sdu.capstone.wastenot;
 
-import android.content.Context;
-
 import java.util.ArrayList;
 
 /**
  * Created by Holden on 3/27/2015.
+ * Sample request for a name from DataStorage:
+ * DataStorage d = new DataStorage();
+ * d.getType("batteries").get(0).getName(); - Returns "Arundel Recycling Center, Inc."
+ * Everything is based off that. Use for each loops I guess. Or ListView.
  */
 
-/*
-    Sample request for a name from DataStorage:
-    DataStorage d = new DataStorage();
-    d.getType("batteries").get(0).getName(); - Returns "Arundel Recycling Center, Inc."
-    Everything is based off that. Use for each loops I guess. Or ListView.
- */
+
 public class DataStorage {
 
     private ArrayList<Center> shingles = new ArrayList<Center>();
@@ -47,7 +44,7 @@ public class DataStorage {
         //init();
     }
 
-    private void init() {
+/*    private void init() {
         shinglesInit();
         bricksInit();
         batteriesInit();
@@ -66,7 +63,7 @@ public class DataStorage {
         tiresInit();
         palletsInit();
     }
-
+*/
 
     private void shinglesInit() {
         shingles.add(new Center("Brandywine Enterprises", "5800 Sheriff Road\n" +

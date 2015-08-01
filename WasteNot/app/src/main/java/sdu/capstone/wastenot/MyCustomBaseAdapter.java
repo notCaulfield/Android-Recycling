@@ -64,7 +64,7 @@ public class MyCustomBaseAdapter extends BaseAdapter {
         TextView txtName;
         TextView txtAddress;
         TextView txtPhone;
-        TextView txtWebsite;
-        TextView txtEmail;
+      //  TextView txtWebsite;
+      //  TextView txtEmail;
     }
 }
