@@ -18,6 +18,10 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.TreeSet;
 
 /**
  * Created by Holden on 4/9/2015.
@@ -44,12 +48,12 @@ public class ListActivity extends Activity {
         }
 
         centers = data.getType(type);
-
         if(sortBy) { //Execute if sortBy is true - sortBy location/distance
             Location currLocation = (Location) extras.get("Location"); //Should work
             for(Center location : centers) {
                 location.calcDistance(currLocation);
             }
+            Collections.sort(centers, new LocationComparator());
         }
 
         setContentView(R.layout.activity_list);
@@ -58,6 +62,7 @@ public class ListActivity extends Activity {
 
         final ListView lv = (ListView) findViewById(R.id.rcListView);
         final MyCustomBaseAdapter adapter = new MyCustomBaseAdapter(this, centers);
+
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
