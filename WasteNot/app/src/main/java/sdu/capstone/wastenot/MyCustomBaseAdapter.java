@@ -20,7 +20,7 @@ public class MyCustomBaseAdapter extends BaseAdapter {
     public MyCustomBaseAdapter(Context context, ArrayList<Center> results) {
         searchArrayList = results;
         mInflater = LayoutInflater.from(context);
-        System.out.println(searchArrayList);
+    //    System.out.println(searchArrayList);
     }
 
     public int getCount() {

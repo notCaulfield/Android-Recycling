@@ -163,12 +163,12 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
 
     @Override
     public void onConnectionSuspended(int i) {
-        Log.i(TAG, "Connection suspended");
+      //  Log.i(TAG, "Connection suspended");
         mGoogleApiClient.connect(); //Attempt to reconnect
     }
 
     @Override
     public void onConnectionFailed(ConnectionResult result) { //Print error on failure
-        Log.i(TAG, "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
+     //   Log.i(TAG, "Connection failed: ConnectionResult.getErrorCode() = " + result.getErrorCode());
     }
 }
