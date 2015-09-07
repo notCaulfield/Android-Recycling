@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="sdu.capstone.wastenot" >
+    package="sdu.capstone.wastenot"
+    android:versionCode="100"
+    android:versionName="mcrPublic_1.00">
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
