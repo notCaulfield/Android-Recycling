@@ -100,6 +100,7 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
         });
         }
 
+    /*
         @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.
@@ -121,7 +122,7 @@ public class MainActivity extends ActionBarActivity implements GoogleApiClient.C
 
         return super.onOptionsItemSelected(item);
     }
-
+*/
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)

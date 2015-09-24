@@ -1,2 +1,28 @@
-Recycling Capstone v0.01
-Project Work Will Be Documented HERE
+Recycling Capstone v1.01
+
+An Android Application created for UMD's Code for Community Challenge.
+Now Available on the Google Play Store as Maryland Recycling.
+
+Three Pages
+
+* Landing Page
+		Choose whether you want to sort the centers by alphabetical order, or by relative distance to your current location. (Requires location services to be enabled)
+		Select from a dropdown menu what type of object you wish to recycle.
+		
+* Center List Page
+		Choose which Recycling center from the state of Maryland, and Washington D.C., that you want more information on.
+
+* Center Information Pages
+	This page provides (when available):
+	  * Name of Recycling Center (Always)
+		* Address of the Recycling Center (Always)
+		* Phone Number
+		* E-mail Address
+		* Company Website
+	Clicking on any of these links will trigger an appropriate function -
+		* Clicking the Address will open up Google Maps with the location selected.
+		* Clicking the Phone Number to automatically dial
+		* Clicking the E-mail Address will open your e-mail client so that the user may compose an e-mail
+		* Clicking the Website Address will open it in the users default browser
+
+If any information is found to be out of date, please contact the developers at mdrecyclingcentersATgmailDOTcom
